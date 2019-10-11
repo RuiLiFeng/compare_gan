@@ -85,11 +85,11 @@ def _get_run_config(tf_random_seed=None,
                     save_checkpoints_steps=5000,
                     keep_checkpoint_max=1000):
   """Return `RunConfig` for TPUs."""
-  tpu_config = tf.tpu.TPUConfig(
+  tpu_config = tf.contrib.tpu.TPUConfig(
       num_shards=1 if single_core else None,  # None = all cores.
       iterations_per_loop=iterations_per_loop)
-  strategy = tf.distribute.MirroredStrategy()
-  return tf.tpu.RunConfig(
+  strategy = tf.contrib.distribute.MirroredStrategy(num_gpus=8)
+  return tf.contrib.tpu.RunConfig(
       model_dir=FLAGS.model_dir,
       train_distribute=strategy,
       tf_random_seed=tf_random_seed,
