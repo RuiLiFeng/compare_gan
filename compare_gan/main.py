@@ -90,7 +90,6 @@ def _get_run_config(tf_random_seed=None,
       iterations_per_loop=iterations_per_loop)
   devices = ["/device:GPU:%d" % gpu for gpu in range(8)]
   strategy = tf.distribute.MirroredStrategy()
-  strategy.reduce()
   return tf.contrib.tpu.RunConfig(
       model_dir=FLAGS.model_dir,
       train_distribute=strategy,
