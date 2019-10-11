@@ -216,7 +216,7 @@ class ModularGAN(AbstractGAN):
     """Returns a TPUEstimator for this GAN."""
     unroll_graph = self._experimental_force_graph_unroll or use_tpu
     num_sub_steps = self._get_num_sub_steps(unroll_graph=unroll_graph)
-    return tf.contrib.tpu.TPUEstimator(
+    return tf.tpu.TPUEstimator(
         config=run_config,
         use_tpu=use_tpu,
         model_fn=self.model_fn,
