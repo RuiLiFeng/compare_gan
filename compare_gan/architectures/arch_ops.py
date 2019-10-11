@@ -291,10 +291,19 @@ def standardize_batch(inputs,
   if use_cross_replica_mean:
     mean, variance = tpu_ops.cross_replica_moments(inputs, reduction_axes)
   else:
-    counts, mean_ss, variance_ss, _ = tf.nn.sufficient_statistics(
-        inputs, reduction_axes, keep_dims=False)
-    mean, variance = tf.nn.normalize_moments(
-        counts, mean_ss, variance_ss, shift=None)
+    # counts, mean_ss, variance_ss, _ = tf.nn.sufficient_statistics(
+    #     inputs, reduction_axes, keep_dims=False)
+    # mean, variance = tf.nn.normalize_moments(
+    #     counts, mean_ss, variance_ss, shift=None)
+    # Multi-Gpu version
+    ctx = tf.distribute.get_replica_context()
+    n = ctx.num_replicas_in_sync
+    mean, mean_sq = ctx.all_reduce(
+        tf.distribute.ReduceOp.SUM,
+        [tf.reduce_mean(x, axis=0) / n,
+         tf.reduce_mean(x ** 2, axis=0) / n]
+    )
+    variance = mean_sq - mean ** 2
 
   if use_moving_averages:
     mean, variance = _moving_moments_for_inference(
