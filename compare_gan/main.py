@@ -92,7 +92,6 @@ def _get_run_config(tf_random_seed=None,
   strategy = tf.distribute.MirroredStrategy(devices=devices)
   return tf.contrib.tpu.RunConfig(
       model_dir=FLAGS.model_dir,
-      eval_distribute=strategy,
       train_distribute=strategy,
       tf_random_seed=tf_random_seed,
       save_checkpoints_steps=save_checkpoints_steps,
