@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="613ef6b5-b515-420b-a4b4-0852de03e8eb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/compare_gan/architectures/arch_ops.py" beforeDir="false" afterPath="$PROJECT_DIR$/compare_gan/architectures/arch_ops.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,7 +24,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/compare_gan/gans/modular_gan.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6588">
+            <state relative-caret-position="3996">
               <caret line="275" column="64" selection-start-line="275" selection-start-column="60" selection-end-line="275" selection-end-column="64" />
             </state>
           </provider>
@@ -40,11 +40,11 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/compare_gan/architectures/arch_ops.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="67">
-              <caret line="298" column="25" lean-forward="true" selection-start-line="298" selection-start-column="25" selection-end-line="298" selection-end-column="25" />
+            <state relative-caret-position="-1040">
+              <caret line="497" column="45" selection-start-line="497" selection-start-column="45" selection-end-line="497" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -53,7 +53,7 @@
         <entry file="file://$PROJECT_DIR$/example_configs/biggan_imagenet128.gin">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="405">
-              <caret line="30" column="15" lean-forward="true" selection-start-line="30" selection-start-column="15" selection-end-line="30" selection-end-column="15" />
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
             </state>
           </provider>
         </entry>
@@ -76,11 +76,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/compare_gan/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2295">
-              <caret line="90" column="48" selection-start-line="90" selection-start-column="48" selection-end-line="90" selection-end-column="48" />
+            <state relative-caret-position="211">
+              <caret line="91" column="45" lean-forward="true" selection-start-line="91" selection-start-column="45" selection-end-line="91" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -113,8 +113,8 @@
       <list>
         <option value="$PROJECT_DIR$/compare_gan/gans/modular_gan.py" />
         <option value="$PROJECT_DIR$/compare_gan/main.py" />
-        <option value="$PROJECT_DIR$/example_configs/biggan_imagenet128.gin" />
         <option value="$PROJECT_DIR$/compare_gan/architectures/arch_ops.py" />
+        <option value="$PROJECT_DIR$/example_configs/biggan_imagenet128.gin" />
       </list>
     </option>
   </component>
@@ -130,7 +130,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -206,18 +206,18 @@
       <option name="presentableId" value="Default" />
       <updated>1570794826145</updated>
       <workItem from="1570794854734" duration="13057000" />
-      <workItem from="1570812182900" duration="1416000" />
+      <workItem from="1570812182900" duration="2412000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14473000" />
+    <option name="totallyTimeSpent" value="15469000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1513" height="973" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.188744" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.188744" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -231,7 +231,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053304" side_tool="true" weight="0.27874187" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49946696" visible="true" weight="0.29181495" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49946696" visible="true" weight="0.29181495" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.26898047" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -255,13 +255,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/compare_gan/gans/modular_gan.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6588">
-          <caret line="275" column="64" selection-start-line="275" selection-start-column="60" selection-end-line="275" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/compare_gan/architectures/infogan.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -269,13 +262,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3726">
           <caret line="155" column="9" selection-start-line="155" selection-start-column="9" selection-end-line="155" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/compare_gan/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2295">
-          <caret line="90" column="48" selection-start-line="90" selection-start-column="48" selection-end-line="90" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -302,14 +288,28 @@
     <entry file="file://$PROJECT_DIR$/example_configs/biggan_imagenet128.gin">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
-          <caret line="30" column="15" lean-forward="true" selection-start-line="30" selection-start-column="15" selection-end-line="30" selection-end-column="15" />
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/compare_gan/architectures/arch_ops.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="298" column="25" lean-forward="true" selection-start-line="298" selection-start-column="25" selection-end-line="298" selection-end-column="25" />
+        <state relative-caret-position="-1040">
+          <caret line="497" column="45" selection-start-line="497" selection-start-column="45" selection-end-line="497" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compare_gan/gans/modular_gan.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3996">
+          <caret line="275" column="64" selection-start-line="275" selection-start-column="60" selection-end-line="275" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compare_gan/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="91" column="45" lean-forward="true" selection-start-line="91" selection-start-column="45" selection-end-line="91" selection-end-column="45" />
         </state>
       </provider>
     </entry>
