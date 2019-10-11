@@ -1,0 +1,4 @@
+  File "/ghome/fengrl/compare_gan/compare_gan/main.py", line 24
+    sys.path.append('/ghome/fengrl/compare_gan'/)
+                                                ^
+SyntaxError: invalid syntax

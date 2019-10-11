@@ -1,0 +1,63 @@
+2019-10-11 05:35:13.692071: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.1
+WARNING: Logging before flag parsing goes to stderr.
+W1011 05:35:16.707007 140145578465088 deprecation_wrapper.py:119] From /usr/local/lib/python3.6/dist-packages/tensorflow_gan/python/contrib_utils.py:48: The name tf.GraphKeys is deprecated. Please use tf.compat.v1.GraphKeys instead.
+
+W1011 05:35:16.707245 140145578465088 deprecation_wrapper.py:119] From /usr/local/lib/python3.6/dist-packages/tensorflow_gan/python/contrib_utils.py:80: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+W1011 05:35:16.715107 140145578465088 deprecation_wrapper.py:119] From /usr/local/lib/python3.6/dist-packages/tensorflow_gan/python/losses/losses_impl.py:73: The name tf.losses.Reduction is deprecated. Please use tf.compat.v1.losses.Reduction instead.
+
+W1011 05:35:16.716440 140145578465088 deprecation_wrapper.py:119] From /usr/local/lib/python3.6/dist-packages/tensorflow_gan/python/train.py:766: The name tf.losses.absolute_difference is deprecated. Please use tf.compat.v1.losses.absolute_difference instead.
+
+W1011 05:35:16.716600 140145578465088 deprecation_wrapper.py:119] From /usr/local/lib/python3.6/dist-packages/tensorflow_gan/python/train.py:768: The name tf.losses.softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.softmax_cross_entropy instead.
+
+W1011 05:35:16.716783 140145578465088 deprecation_wrapper.py:119] From /usr/local/lib/python3.6/dist-packages/tensorflow_gan/python/train.py:1037: The name tf.train.SessionRunHook is deprecated. Please use tf.estimator.SessionRunHook instead.
+
+W1011 05:35:17.896881 140145578465088 lazy_loader.py:50] 
+The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+  * https://github.com/tensorflow/io (for I/O related ops)
+If you depend on functionality not listed there, please file an issue.
+
+W1011 05:35:18.059737 140145578465088 deprecation_wrapper.py:119] From /usr/local/lib/python3.6/dist-packages/gin/tf/utils.py:34: The name tf.gfile.Open is deprecated. Please use tf.io.gfile.GFile instead.
+
+W1011 05:35:18.059967 140145578465088 deprecation_wrapper.py:119] From /usr/local/lib/python3.6/dist-packages/gin/tf/utils.py:34: The name tf.gfile.Exists is deprecated. Please use tf.io.gfile.exists instead.
+
+W1011 05:35:18.090040 140145578465088 deprecation_wrapper.py:119] From /ghome/fengrl/compare_gan/compare_gan/architectures/abstract_arch.py:71: The name tf.AUTO_REUSE is deprecated. Please use tf.compat.v1.AUTO_REUSE instead.
+
+W1011 05:35:18.210239 140145578465088 deprecation_wrapper.py:119] From /ghome/fengrl/compare_gan/compare_gan/gans/modular_gan.py:70: The name tf.train.AdamOptimizer is deprecated. Please use tf.compat.v1.train.AdamOptimizer instead.
+
+W1011 05:35:18.243146 140145578465088 deprecation_wrapper.py:119] From /usr/local/lib/python3.6/dist-packages/gin/tf/external_configurables.py:32: The name tf.train.exponential_decay is deprecated. Please use tf.compat.v1.train.exponential_decay instead.
+
+W1011 05:35:18.243473 140145578465088 deprecation_wrapper.py:119] From /usr/local/lib/python3.6/dist-packages/gin/tf/external_configurables.py:33: The name tf.train.inverse_time_decay is deprecated. Please use tf.compat.v1.train.inverse_time_decay instead.
+
+W1011 05:35:18.243962 140145578465088 deprecation_wrapper.py:119] From /usr/local/lib/python3.6/dist-packages/gin/tf/external_configurables.py:50: The name tf.losses.hinge_loss is deprecated. Please use tf.compat.v1.losses.hinge_loss instead.
+
+W1011 05:35:18.244239 140145578465088 deprecation_wrapper.py:119] From /usr/local/lib/python3.6/dist-packages/gin/tf/external_configurables.py:51: The name tf.losses.huber_loss is deprecated. Please use tf.compat.v1.losses.huber_loss instead.
+
+I1011 05:35:18.247911 140145578465088 main.py:111] Gin config: ['/ghome/fengrl/compare_gan-master/example_configs/biggan_imagenet128.gin']
+Gin bindings: []
+I1011 05:35:18.300842 140145578465088 runner_lib.py:302] Running schedule 'train' with options: {'use_tpu': False, 'batch_size': 2048, 'gan_class': <class 'compare_gan.gans.modular_gan.ModularGAN'>, 'architecture': 'resnet_biggan_arch', 'training_steps': 250000, 'lambda': 1, 'disc_iters': 2, 'z_dim': 120}
+W1011 05:35:18.301086 140145578465088 deprecation_wrapper.py:119] From /ghome/fengrl/compare_gan/compare_gan/gans/utils.py:28: The name tf.gfile.IsDirectory is deprecated. Please use tf.io.gfile.isdir instead.
+
+W1011 05:35:18.301351 140145578465088 deprecation_wrapper.py:119] From /ghome/fengrl/compare_gan/compare_gan/gans/utils.py:29: The name tf.gfile.MakeDirs is deprecated. Please use tf.io.gfile.makedirs instead.
+
+Traceback (most recent call last):
+  File "/ghome/fengrl/compare_gan/compare_gan/main.py", line 135, in <module>
+    app.run(main)
+  File "/usr/local/lib/python3.6/dist-packages/absl/app.py", line 300, in run
+    _run_main(main, args)
+  File "/usr/local/lib/python3.6/dist-packages/absl/app.py", line 251, in _run_main
+    sys.exit(main(argv))
+  File "/ghome/fengrl/compare_gan/compare_gan/main.py", line 129, in main
+    eval_every_steps=FLAGS.eval_every_steps)
+  File "/ghome/fengrl/compare_gan/compare_gan/runner_lib.py", line 308, in run_with_schedule
+    utils.check_folder(result_dir)
+  File "/ghome/fengrl/compare_gan/compare_gan/gans/utils.py", line 29, in check_folder
+    tf.gfile.MakeDirs(log_dir)
+  File "/usr/local/lib/python3.6/dist-packages/tensorflow/python/lib/io/file_io.py", line 438, in recursive_create_dir
+    recursive_create_dir_v2(dirname)
+  File "/usr/local/lib/python3.6/dist-packages/tensorflow/python/lib/io/file_io.py", line 453, in recursive_create_dir_v2
+    pywrap_tensorflow.RecursivelyCreateDir(compat.as_bytes(path))
+tensorflow.python.framework.errors_impl.PermissionDeniedError: /gdata/fengrl/compare_gan; Permission denied

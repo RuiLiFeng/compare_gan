@@ -1,0 +1,20 @@
+Time is Fri Oct 11 19:30:30 CST 2019
+Directory is /ghome/fengrl/compare_gan
+This job runs on following nodes:
+Node:G138
+Gpus:G138-gpu15
+G138-gpu14
+G138-gpu13
+G138-gpu12
+G138-gpu11
+G138-gpu10
+G138-gpu9
+G138-gpu8
+CUDA_VISIBLE_DEVICES:15,14,13,12,11,10,9,8
+
+WARNING: The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+If you depend on functionality not listed there, please file an issue.
+

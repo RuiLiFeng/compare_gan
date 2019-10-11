@@ -1,0 +1,373 @@
+2019-10-11 06:59:29.591356: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.1
+WARNING: Logging before flag parsing goes to stderr.
+W1011 06:59:31.445688 139866928301888 deprecation_wrapper.py:119] From /usr/local/lib/python3.6/dist-packages/tensorflow_gan/python/contrib_utils.py:48: The name tf.GraphKeys is deprecated. Please use tf.compat.v1.GraphKeys instead.
+
+W1011 06:59:31.445894 139866928301888 deprecation_wrapper.py:119] From /usr/local/lib/python3.6/dist-packages/tensorflow_gan/python/contrib_utils.py:80: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+W1011 06:59:31.452625 139866928301888 deprecation_wrapper.py:119] From /usr/local/lib/python3.6/dist-packages/tensorflow_gan/python/losses/losses_impl.py:73: The name tf.losses.Reduction is deprecated. Please use tf.compat.v1.losses.Reduction instead.
+
+W1011 06:59:31.453774 139866928301888 deprecation_wrapper.py:119] From /usr/local/lib/python3.6/dist-packages/tensorflow_gan/python/train.py:766: The name tf.losses.absolute_difference is deprecated. Please use tf.compat.v1.losses.absolute_difference instead.
+
+W1011 06:59:31.453901 139866928301888 deprecation_wrapper.py:119] From /usr/local/lib/python3.6/dist-packages/tensorflow_gan/python/train.py:768: The name tf.losses.softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.softmax_cross_entropy instead.
+
+W1011 06:59:31.454012 139866928301888 deprecation_wrapper.py:119] From /usr/local/lib/python3.6/dist-packages/tensorflow_gan/python/train.py:1037: The name tf.train.SessionRunHook is deprecated. Please use tf.estimator.SessionRunHook instead.
+
+W1011 06:59:32.134083 139866928301888 lazy_loader.py:50] 
+The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+  * https://github.com/tensorflow/io (for I/O related ops)
+If you depend on functionality not listed there, please file an issue.
+
+W1011 06:59:32.203093 139866928301888 deprecation_wrapper.py:119] From /usr/local/lib/python3.6/dist-packages/gin/tf/utils.py:34: The name tf.gfile.Open is deprecated. Please use tf.io.gfile.GFile instead.
+
+W1011 06:59:32.203254 139866928301888 deprecation_wrapper.py:119] From /usr/local/lib/python3.6/dist-packages/gin/tf/utils.py:34: The name tf.gfile.Exists is deprecated. Please use tf.io.gfile.exists instead.
+
+W1011 06:59:32.219588 139866928301888 deprecation_wrapper.py:119] From /ghome/fengrl/compare_gan/compare_gan/architectures/abstract_arch.py:71: The name tf.AUTO_REUSE is deprecated. Please use tf.compat.v1.AUTO_REUSE instead.
+
+W1011 06:59:32.345476 139866928301888 deprecation_wrapper.py:119] From /ghome/fengrl/compare_gan/compare_gan/gans/modular_gan.py:70: The name tf.train.AdamOptimizer is deprecated. Please use tf.compat.v1.train.AdamOptimizer instead.
+
+W1011 06:59:32.355697 139866928301888 deprecation_wrapper.py:119] From /usr/local/lib/python3.6/dist-packages/gin/tf/external_configurables.py:32: The name tf.train.exponential_decay is deprecated. Please use tf.compat.v1.train.exponential_decay instead.
+
+W1011 06:59:32.355954 139866928301888 deprecation_wrapper.py:119] From /usr/local/lib/python3.6/dist-packages/gin/tf/external_configurables.py:33: The name tf.train.inverse_time_decay is deprecated. Please use tf.compat.v1.train.inverse_time_decay instead.
+
+W1011 06:59:32.356304 139866928301888 deprecation_wrapper.py:119] From /usr/local/lib/python3.6/dist-packages/gin/tf/external_configurables.py:50: The name tf.losses.hinge_loss is deprecated. Please use tf.compat.v1.losses.hinge_loss instead.
+
+W1011 06:59:32.356448 139866928301888 deprecation_wrapper.py:119] From /usr/local/lib/python3.6/dist-packages/gin/tf/external_configurables.py:51: The name tf.losses.huber_loss is deprecated. Please use tf.compat.v1.losses.huber_loss instead.
+
+I1011 06:59:32.358866 139866928301888 main.py:111] Gin config: ['/ghome/fengrl/compare_gan-master/example_configs/biggan_imagenet128.gin']
+Gin bindings: []
+I1011 06:59:32.382284 139866928301888 runner_lib.py:302] Running schedule 'train' with options: {'use_tpu': False, 'batch_size': 2048, 'gan_class': <class 'compare_gan.gans.modular_gan.ModularGAN'>, 'architecture': 'resnet_biggan_arch', 'training_steps': 250000, 'lambda': 1, 'disc_iters': 2, 'z_dim': 120}
+W1011 06:59:32.382476 139866928301888 deprecation_wrapper.py:119] From /ghome/fengrl/compare_gan/compare_gan/gans/utils.py:28: The name tf.gfile.IsDirectory is deprecated. Please use tf.io.gfile.isdir instead.
+
+I1011 06:59:32.389521 139866928301888 datasets.py:103] ImageDatasetV2(name=imagenet_128, tfds_name=imagenet2012, resolution=128, colors=3, num_classes=1000, eval_test_samples=50000, seed=547)
+I1011 06:59:32.390560 139866928301888 hooks.py:129] Creating ReportProgressHook to report progress every 100 steps.
+I1011 06:59:32.390682 139866928301888 runner_lib.py:325] Using AsyncCheckpointSaverHook.
+I1011 06:59:32.390830 139866928301888 async_checkpoint.py:67] Create AsyncCheckpointSaverHook.
+W1011 06:59:32.391284 139866928301888 estimator.py:1984] Estimator's model_fn (<bound method ModularGAN.model_fn of <compare_gan.gans.modular_gan.ModularGAN object at 0x7f33f20daba8>>) includes params argument, but params are not passed to Estimator.
+I1011 06:59:32.392417 139866928301888 estimator.py:209] Using config: {'_model_dir': '/gdata/fengrl/compare_gan', '_tf_random_seed': None, '_save_summary_steps': 100, '_save_checkpoints_steps': 1000000, '_save_checkpoints_secs': None, '_session_config': allow_soft_placement: true
+graph_options {
+  rewrite_options {
+    meta_optimizer_iterations: ONE
+  }
+}
+, '_keep_checkpoint_max': 1000, '_keep_checkpoint_every_n_hours': 10000, '_log_step_count_steps': None, '_train_distribute': None, '_device_fn': None, '_protocol': None, '_eval_distribute': None, '_experimental_distribute': None, '_experimental_max_worker_delay_secs': None, '_service': None, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x7f33f20982b0>, '_task_type': 'worker', '_task_id': 0, '_global_id_in_cluster': 0, '_master': '', '_evaluation_master': '', '_is_chief': True, '_num_ps_replicas': 0, '_num_worker_replicas': 1, '_tpu_config': TPUConfig(iterations_per_loop=500, num_shards=None, num_cores_per_replica=None, per_host_input_for_training=2, tpu_job_name=None, initial_infeed_sleep_secs=None, input_partition_dims=None, eval_training_input_configuration=2), '_cluster': None}
+I1011 06:59:32.393143 139866928301888 tpu_context.py:209] _TPUContext: eval_on_tpu True
+W1011 06:59:32.393284 139866928301888 tpu_context.py:211] eval_on_tpu ignored because use_tpu is False.
+W1011 06:59:33.549840 139866928301888 deprecation.py:323] From /usr/local/lib/python3.6/dist-packages/tensorflow/python/training/training_util.py:236: Variable.initialized_value (from tensorflow.python.ops.variables) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use Variable.read_value. Variables in 2.X are initialized automatically both in eager and graph (inside tf.defun) contexts.
+W1011 06:59:33.569292 139866928301888 datasets.py:166] No TPUContext, using unmodified dataset seed 547.
+I1011 06:59:33.569474 139866928301888 datasets.py:276] train_input_fn(): params={'batch_size': 2048} seed=547
+I1011 06:59:33.597909 139866928301888 dataset_builder.py:157] Overwrite dataset info from restored data version.
+I1011 06:59:33.728328 139866928301888 dataset_builder.py:193] Reusing dataset imagenet2012 (/gpub/temp/imagenet2012/imagenet2012/2.0.0)
+2019-10-11 06:59:33.877763: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcuda.so.1
+2019-10-11 06:59:34.772233: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1640] Found device 0 with properties: 
+name: Tesla K80 major: 3 minor: 7 memoryClockRate(GHz): 0.8235
+pciBusID: 0000:15:00.0
+2019-10-11 06:59:34.776193: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1640] Found device 1 with properties: 
+name: Tesla K80 major: 3 minor: 7 memoryClockRate(GHz): 0.8235
+pciBusID: 0000:14:00.0
+2019-10-11 06:59:34.780152: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1640] Found device 2 with properties: 
+name: Tesla K80 major: 3 minor: 7 memoryClockRate(GHz): 0.8235
+pciBusID: 0000:11:00.0
+2019-10-11 06:59:34.784536: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1640] Found device 3 with properties: 
+name: Tesla K80 major: 3 minor: 7 memoryClockRate(GHz): 0.8235
+pciBusID: 0000:10:00.0
+2019-10-11 06:59:34.789571: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1640] Found device 4 with properties: 
+name: Tesla K80 major: 3 minor: 7 memoryClockRate(GHz): 0.8235
+pciBusID: 0000:0b:00.0
+2019-10-11 06:59:34.793465: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1640] Found device 5 with properties: 
+name: Tesla K80 major: 3 minor: 7 memoryClockRate(GHz): 0.8235
+pciBusID: 0000:0a:00.0
+2019-10-11 06:59:34.798483: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1640] Found device 6 with properties: 
+name: Tesla K80 major: 3 minor: 7 memoryClockRate(GHz): 0.8235
+pciBusID: 0000:07:00.0
+2019-10-11 06:59:34.802400: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1640] Found device 7 with properties: 
+name: Tesla K80 major: 3 minor: 7 memoryClockRate(GHz): 0.8235
+pciBusID: 0000:06:00.0
+2019-10-11 06:59:34.802429: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.1
+2019-10-11 06:59:34.888310: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcublas.so.10
+2019-10-11 06:59:34.933433: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcufft.so.10
+2019-10-11 06:59:34.943842: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcurand.so.10
+2019-10-11 06:59:35.031177: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusolver.so.10
+2019-10-11 06:59:35.042476: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusparse.so.10
+2019-10-11 06:59:35.197846: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
+2019-10-11 06:59:35.255291: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1717] Ignoring visible gpu device (device: 0, name: Tesla K80, pci bus id: 0000:15:00.0, compute capability: 3.7) with Cuda compute capability 3.7. The minimum required Cuda capability is 5.2.
+2019-10-11 06:59:35.260377: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1717] Ignoring visible gpu device (device: 1, name: Tesla K80, pci bus id: 0000:14:00.0, compute capability: 3.7) with Cuda compute capability 3.7. The minimum required Cuda capability is 5.2.
+2019-10-11 06:59:35.265593: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1717] Ignoring visible gpu device (device: 2, name: Tesla K80, pci bus id: 0000:11:00.0, compute capability: 3.7) with Cuda compute capability 3.7. The minimum required Cuda capability is 5.2.
+2019-10-11 06:59:35.270555: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1717] Ignoring visible gpu device (device: 3, name: Tesla K80, pci bus id: 0000:10:00.0, compute capability: 3.7) with Cuda compute capability 3.7. The minimum required Cuda capability is 5.2.
+2019-10-11 06:59:35.275541: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1717] Ignoring visible gpu device (device: 4, name: Tesla K80, pci bus id: 0000:0b:00.0, compute capability: 3.7) with Cuda compute capability 3.7. The minimum required Cuda capability is 5.2.
+2019-10-11 06:59:35.280904: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1717] Ignoring visible gpu device (device: 5, name: Tesla K80, pci bus id: 0000:0a:00.0, compute capability: 3.7) with Cuda compute capability 3.7. The minimum required Cuda capability is 5.2.
+2019-10-11 06:59:35.285725: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1717] Ignoring visible gpu device (device: 6, name: Tesla K80, pci bus id: 0000:07:00.0, compute capability: 3.7) with Cuda compute capability 3.7. The minimum required Cuda capability is 5.2.
+2019-10-11 06:59:35.290403: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1717] Ignoring visible gpu device (device: 7, name: Tesla K80, pci bus id: 0000:06:00.0, compute capability: 3.7) with Cuda compute capability 3.7. The minimum required Cuda capability is 5.2.
+W1011 06:59:35.348935 139866928301888 deprecation.py:323] From /ghome/fengrl/compare_gan/compare_gan/datasets.py:450: sample_distorted_bounding_box (from tensorflow.python.ops.image_ops_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+`seed2` arg is deprecated.Use sample_distorted_bounding_box_v2 instead.
+W1011 06:59:35.352759 139866928301888 deprecation_wrapper.py:119] From /ghome/fengrl/compare_gan/compare_gan/datasets.py:474: The name tf.image.resize_images is deprecated. Please use tf.image.resize instead.
+
+I1011 06:59:35.368655 139866928301888 modular_gan.py:396] _preprocess_fn(): images=Tensor("args_0:0", shape=(128, 128, 3), dtype=float32), labels=Tensor("args_1:0", shape=(), dtype=int64), seed=547
+W1011 06:59:35.368932 139866928301888 deprecation_wrapper.py:119] From /ghome/fengrl/compare_gan/compare_gan/gans/modular_gan.py:397: The name tf.set_random_seed is deprecated. Please use tf.compat.v1.set_random_seed instead.
+
+W1011 06:59:35.385924 139866928301888 deprecation.py:323] From /ghome/fengrl/compare_gan/compare_gan/tpu/tpu_random.py:65: enumerate_dataset (from tensorflow.python.data.experimental.ops.enumerate_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.Dataset.enumerate()
+I1011 06:59:35.398019 139866928301888 tpu_random.py:71] Passing random offset: Tensor("Cast:0", shape=(), dtype=int32) with data ({'images': <tf.Tensor 'args_1:0' shape=(128, 128, 3) dtype=float32>, 'z': <tf.Tensor 'args_3:0' shape=(120,) dtype=float32>, 'sampled_labels': <tf.Tensor 'args_2:0' shape=() dtype=int32>}, <tf.Tensor 'args_4:0' shape=() dtype=int64>).
+W1011 06:59:35.412575 139866928301888 deprecation.py:323] From /usr/local/lib/python3.6/dist-packages/tensorflow/python/data/util/random_seed.py:58: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+I1011 06:59:35.432366 139866928301888 estimator.py:1145] Calling model_fn.
+I1011 06:59:35.432871 139866928301888 tpu_estimator.py:2965] Running train on CPU
+I1011 06:59:35.433414 139866928301888 modular_gan.py:529] model_fn(): features={'images': <tf.Tensor 'IteratorGetNext:1' shape=(2048, 128, 128, 3) dtype=float32>, 'z': <tf.Tensor 'IteratorGetNext:3' shape=(2048, 120) dtype=float32>, 'sampled_labels': <tf.Tensor 'IteratorGetNext:2' shape=(2048,) dtype=int32>, '_RANDOM_OFFSET': <tf.Tensor 'IteratorGetNext:0' shape=(2048,) dtype=int32>}, labels=Tensor("IteratorGetNext:4", shape=(2048,), dtype=int64),mode=train, params={'batch_size': 2048, 'use_tpu': False}
+W1011 06:59:35.451493 139866928301888 deprecation_wrapper.py:119] From /ghome/fengrl/compare_gan/compare_gan/architectures/abstract_arch.py:72: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+I1011 06:59:35.452081 139866928301888 resnet_biggan.py:236] [Generator] inputs are z=(2048, 120), y=(2048, 1000)
+W1011 06:59:35.452512 139866928301888 deprecation_wrapper.py:119] From /ghome/fengrl/compare_gan/compare_gan/architectures/arch_ops.py:543: The name tf.get_variable is deprecated. Please use tf.compat.v1.get_variable instead.
+
+I1011 06:59:35.482258 139866928301888 resnet_biggan.py:262] [Generator] z0=(2048, 20), z_per_block=['(2048, 20)', '(2048, 20)', '(2048, 20)', '(2048, 20)', '(2048, 20)'], y_per_block=['(2048, 148)', '(2048, 148)', '(2048, 148)', '(2048, 148)', '(2048, 148)']
+I1011 06:59:36.058817 139866928301888 resnet_biggan.py:150] [Block] (2048, 4, 4, 1536) (z=(2048, 20), y=(2048, 148)) -> (2048, 8, 8, 1536)
+I1011 06:59:36.501883 139866928301888 resnet_biggan.py:150] [Block] (2048, 8, 8, 1536) (z=(2048, 20), y=(2048, 148)) -> (2048, 16, 16, 768)
+I1011 06:59:36.884597 139866928301888 resnet_biggan.py:150] [Block] (2048, 16, 16, 768) (z=(2048, 20), y=(2048, 148)) -> (2048, 32, 32, 384)
+I1011 06:59:37.264864 139866928301888 resnet_biggan.py:150] [Block] (2048, 32, 32, 384) (z=(2048, 20), y=(2048, 148)) -> (2048, 64, 64, 192)
+I1011 06:59:37.265162 139866928301888 resnet_biggan.py:289] [Generator] Applying non-local block to (2048, 64, 64, 192)
+W1011 06:59:37.346883 139866928301888 deprecation.py:323] From /ghome/fengrl/compare_gan/compare_gan/architectures/arch_ops.py:741: max_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.MaxPooling2D instead.
+I1011 06:59:37.954493 139866928301888 resnet_biggan.py:150] [Block] (2048, 64, 64, 192) (z=(2048, 20), y=(2048, 148)) -> (2048, 128, 128, 96)
+I1011 06:59:37.954755 139866928301888 resnet_biggan.py:294] [Generator] before final processing: (2048, 128, 128, 96)
+I1011 06:59:38.023804 139866928301888 resnet_biggan.py:300] [Generator] after final processing: (2048, 128, 128, 3)
+I1011 06:59:38.033655 139866928301888 tpu_random.py:86] Got global random offset: Tensor("disc_step_1/strided_slice:0", shape=(), dtype=int32)
+I1011 06:59:38.040951 139866928301888 resnet_biggan.py:379] [Discriminator] inputs are x=(4096, 128, 128, 3), y=(4096, 1000)
+I1011 06:59:38.187454 139866928301888 resnet_biggan.py:150] [Block] (4096, 128, 128, 3) (z=None, y=(4096, 1000)) -> (4096, 64, 64, 96)
+I1011 06:59:38.187673 139866928301888 resnet_biggan.py:398] [Discriminator] Applying non-local block to (4096, 64, 64, 96)
+I1011 06:59:38.484651 139866928301888 resnet_biggan.py:150] [Block] (4096, 64, 64, 96) (z=None, y=(4096, 1000)) -> (4096, 32, 32, 192)
+I1011 06:59:38.604824 139866928301888 resnet_biggan.py:150] [Block] (4096, 32, 32, 192) (z=None, y=(4096, 1000)) -> (4096, 16, 16, 384)
+I1011 06:59:38.743849 139866928301888 resnet_biggan.py:150] [Block] (4096, 16, 16, 384) (z=None, y=(4096, 1000)) -> (4096, 8, 8, 768)
+I1011 06:59:38.995163 139866928301888 resnet_biggan.py:150] [Block] (4096, 8, 8, 768) (z=None, y=(4096, 1000)) -> (4096, 4, 4, 1536)
+I1011 06:59:39.086549 139866928301888 resnet_biggan.py:150] [Block] (4096, 4, 4, 1536) (z=None, y=(4096, 1000)) -> (4096, 4, 4, 1536)
+I1011 06:59:39.086764 139866928301888 resnet_biggan.py:403] [Discriminator] before final processing: (4096, 4, 4, 1536)
+I1011 06:59:39.132924 139866928301888 resnet_biggan.py:407] [Discriminator] after final processing: (4096, 4, 4, 1536)
+W1011 06:59:39.133408 139866928301888 deprecation.py:506] From /usr/local/lib/python3.6/dist-packages/tensorflow/python/ops/init_ops.py:1288: calling VarianceScaling.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+I1011 06:59:39.168565 139866928301888 resnet_biggan.py:422] [Discriminator] embedded_y for projection: (4096, 1536)
+I1011 06:59:40.548540 139866928301888 tpu_random.py:86] Got global random offset: Tensor("gen_step/cond/strided_slice:0", shape=(), dtype=int32)
+I1011 06:59:40.559609 139866928301888 resnet_biggan.py:379] [Discriminator] inputs are x=(4096, 128, 128, 3), y=(4096, 1000)
+I1011 06:59:40.636928 139866928301888 resnet_biggan.py:150] [Block] (4096, 128, 128, 3) (z=None, y=(4096, 1000)) -> (4096, 64, 64, 96)
+I1011 06:59:40.637201 139866928301888 resnet_biggan.py:398] [Discriminator] Applying non-local block to (4096, 64, 64, 96)
+I1011 06:59:40.925695 139866928301888 resnet_biggan.py:150] [Block] (4096, 64, 64, 96) (z=None, y=(4096, 1000)) -> (4096, 32, 32, 192)
+I1011 06:59:40.994161 139866928301888 resnet_biggan.py:150] [Block] (4096, 32, 32, 192) (z=None, y=(4096, 1000)) -> (4096, 16, 16, 384)
+I1011 06:59:41.064732 139866928301888 resnet_biggan.py:150] [Block] (4096, 16, 16, 384) (z=None, y=(4096, 1000)) -> (4096, 8, 8, 768)
+I1011 06:59:41.135960 139866928301888 resnet_biggan.py:150] [Block] (4096, 8, 8, 768) (z=None, y=(4096, 1000)) -> (4096, 4, 4, 1536)
+I1011 06:59:41.178392 139866928301888 resnet_biggan.py:150] [Block] (4096, 4, 4, 1536) (z=None, y=(4096, 1000)) -> (4096, 4, 4, 1536)
+I1011 06:59:41.178594 139866928301888 resnet_biggan.py:403] [Discriminator] before final processing: (4096, 4, 4, 1536)
+I1011 06:59:41.201079 139866928301888 resnet_biggan.py:407] [Discriminator] after final processing: (4096, 4, 4, 1536)
+I1011 06:59:41.222509 139866928301888 resnet_biggan.py:422] [Discriminator] embedded_y for projection: (4096, 1536)
+I1011 06:59:45.282588 139866928301888 modular_gan.py:501] Creating moving averages of weights: [<tf.Variable 'generator/embed_y/kernel:0' shape=(1000, 128) dtype=float32_ref>, <tf.Variable 'generator/fc_noise/kernel:0' shape=(20, 24576) dtype=float32_ref>, <tf.Variable 'generator/fc_noise/bias:0' shape=(24576,) dtype=float32_ref>, <tf.Variable 'generator/B1/bn1/condition/gamma/kernel:0' shape=(148, 1536) dtype=float32_ref>, <tf.Variable 'generator/B1/bn1/condition/beta/kernel:0' shape=(148, 1536) dtype=float32_ref>, <tf.Variable 'generator/B1/up_conv1/kernel:0' shape=(3, 3, 1536, 1536) dtype=float32_ref>, <tf.Variable 'generator/B1/up_conv1/bias:0' shape=(1536,) dtype=float32_ref>, <tf.Variable 'generator/B1/bn2/condition/gamma/kernel:0' shape=(148, 1536) dtype=float32_ref>, <tf.Variable 'generator/B1/bn2/condition/beta/kernel:0' shape=(148, 1536) dtype=float32_ref>, <tf.Variable 'generator/B1/same_conv2/kernel:0' shape=(3, 3, 1536, 1536) dtype=float32_ref>, <tf.Variable 'generator/B1/same_conv2/bias:0' shape=(1536,) dtype=float32_ref>, <tf.Variable 'generator/B1/up_conv_shortcut/kernel:0' shape=(1, 1, 1536, 1536) dtype=float32_ref>, <tf.Variable 'generator/B1/up_conv_shortcut/bias:0' shape=(1536,) dtype=float32_ref>, <tf.Variable 'generator/B2/bn1/condition/gamma/kernel:0' shape=(148, 1536) dtype=float32_ref>, <tf.Variable 'generator/B2/bn1/condition/beta/kernel:0' shape=(148, 1536) dtype=float32_ref>, <tf.Variable 'generator/B2/up_conv1/kernel:0' shape=(3, 3, 1536, 768) dtype=float32_ref>, <tf.Variable 'generator/B2/up_conv1/bias:0' shape=(768,) dtype=float32_ref>, <tf.Variable 'generator/B2/bn2/condition/gamma/kernel:0' shape=(148, 768) dtype=float32_ref>, <tf.Variable 'generator/B2/bn2/condition/beta/kernel:0' shape=(148, 768) dtype=float32_ref>, <tf.Variable 'generator/B2/same_conv2/kernel:0' shape=(3, 3, 768, 768) dtype=float32_ref>, <tf.Variable 'generator/B2/same_conv2/bias:0' shape=(768,) dtype=float32_ref>, <tf.Variable 'generator/B2/up_conv_shortcut/kernel:0' shape=(1, 1, 1536, 768) dtype=float32_ref>, <tf.Variable 'generator/B2/up_conv_shortcut/bias:0' shape=(768,) dtype=float32_ref>, <tf.Variable 'generator/B3/bn1/condition/gamma/kernel:0' shape=(148, 768) dtype=float32_ref>, <tf.Variable 'generator/B3/bn1/condition/beta/kernel:0' shape=(148, 768) dtype=float32_ref>, <tf.Variable 'generator/B3/up_conv1/kernel:0' shape=(3, 3, 768, 384) dtype=float32_ref>, <tf.Variable 'generator/B3/up_conv1/bias:0' shape=(384,) dtype=float32_ref>, <tf.Variable 'generator/B3/bn2/condition/gamma/kernel:0' shape=(148, 384) dtype=float32_ref>, <tf.Variable 'generator/B3/bn2/condition/beta/kernel:0' shape=(148, 384) dtype=float32_ref>, <tf.Variable 'generator/B3/same_conv2/kernel:0' shape=(3, 3, 384, 384) dtype=float32_ref>, <tf.Variable 'generator/B3/same_conv2/bias:0' shape=(384,) dtype=float32_ref>, <tf.Variable 'generator/B3/up_conv_shortcut/kernel:0' shape=(1, 1, 768, 384) dtype=float32_ref>, <tf.Variable 'generator/B3/up_conv_shortcut/bias:0' shape=(384,) dtype=float32_ref>, <tf.Variable 'generator/B4/bn1/condition/gamma/kernel:0' shape=(148, 384) dtype=float32_ref>, <tf.Variable 'generator/B4/bn1/condition/beta/kernel:0' shape=(148, 384) dtype=float32_ref>, <tf.Variable 'generator/B4/up_conv1/kernel:0' shape=(3, 3, 384, 192) dtype=float32_ref>, <tf.Variable 'generator/B4/up_conv1/bias:0' shape=(192,) dtype=float32_ref>, <tf.Variable 'generator/B4/bn2/condition/gamma/kernel:0' shape=(148, 192) dtype=float32_ref>, <tf.Variable 'generator/B4/bn2/condition/beta/kernel:0' shape=(148, 192) dtype=float32_ref>, <tf.Variable 'generator/B4/same_conv2/kernel:0' shape=(3, 3, 192, 192) dtype=float32_ref>, <tf.Variable 'generator/B4/same_conv2/bias:0' shape=(192,) dtype=float32_ref>, <tf.Variable 'generator/B4/up_conv_shortcut/kernel:0' shape=(1, 1, 384, 192) dtype=float32_ref>, <tf.Variable 'generator/B4/up_conv_shortcut/bias:0' shape=(192,) dtype=float32_ref>, <tf.Variable 'generator/non_local_block/conv2d_theta/kernel:0' shape=(1, 1, 192, 24) dtype=float32_ref>, <tf.Variable 'generator/non_local_block/conv2d_phi/kernel:0' shape=(1, 1, 192, 24) dtype=float32_ref>, <tf.Variable 'generator/non_local_block/conv2d_g/kernel:0' shape=(1, 1, 192, 96) dtype=float32_ref>, <tf.Variable 'generator/non_local_block/sigma:0' shape=() dtype=float32_ref>, <tf.Variable 'generator/non_local_block/conv2d_attn_g/kernel:0' shape=(1, 1, 96, 192) dtype=float32_ref>, <tf.Variable 'generator/B5/bn1/condition/gamma/kernel:0' shape=(148, 192) dtype=float32_ref>, <tf.Variable 'generator/B5/bn1/condition/beta/kernel:0' shape=(148, 192) dtype=float32_ref>, <tf.Variable 'generator/B5/up_conv1/kernel:0' shape=(3, 3, 192, 96) dtype=float32_ref>, <tf.Variable 'generator/B5/up_conv1/bias:0' shape=(96,) dtype=float32_ref>, <tf.Variable 'generator/B5/bn2/condition/gamma/kernel:0' shape=(148, 96) dtype=float32_ref>, <tf.Variable 'generator/B5/bn2/condition/beta/kernel:0' shape=(148, 96) dtype=float32_ref>, <tf.Variable 'generator/B5/same_conv2/kernel:0' shape=(3, 3, 96, 96) dtype=float32_ref>, <tf.Variable 'generator/B5/same_conv2/bias:0' shape=(96,) dtype=float32_ref>, <tf.Variable 'generator/B5/up_conv_shortcut/kernel:0' shape=(1, 1, 192, 96) dtype=float32_ref>, <tf.Variable 'generator/B5/up_conv_shortcut/bias:0' shape=(96,) dtype=float32_ref>, <tf.Variable 'generator/final_norm/gamma:0' shape=(96,) dtype=float32_ref>, <tf.Variable 'generator/final_norm/beta:0' shape=(96,) dtype=float32_ref>, <tf.Variable 'generator/final_conv/kernel:0' shape=(3, 3, 96, 3) dtype=float32_ref>, <tf.Variable 'generator/final_conv/bias:0' shape=(3,) dtype=float32_ref>]
+I1011 06:59:46.956774 139866928301888 utils.py:174] 
+Generator variables:
++--------------------------------------------------+--------------------+------------+---------+
+| Name                                             | Shape              | Size       | Type    |
++--------------------------------------------------+--------------------+------------+---------+
+| generator/embed_y/kernel:0                       |        (1000, 128) |    128,000 | float32 |
+| generator/fc_noise/kernel:0                      |        (20, 24576) |    491,520 | float32 |
+| generator/fc_noise/bias:0                        |           (24576,) |     24,576 | float32 |
+| generator/B1/bn1/condition/gamma/kernel:0        |        (148, 1536) |    227,328 | float32 |
+| generator/B1/bn1/condition/beta/kernel:0         |        (148, 1536) |    227,328 | float32 |
+| generator/B1/up_conv1/kernel:0                   | (3, 3, 1536, 1536) | 21,233,664 | float32 |
+| generator/B1/up_conv1/bias:0                     |            (1536,) |      1,536 | float32 |
+| generator/B1/bn2/condition/gamma/kernel:0        |        (148, 1536) |    227,328 | float32 |
+| generator/B1/bn2/condition/beta/kernel:0         |        (148, 1536) |    227,328 | float32 |
+| generator/B1/same_conv2/kernel:0                 | (3, 3, 1536, 1536) | 21,233,664 | float32 |
+| generator/B1/same_conv2/bias:0                   |            (1536,) |      1,536 | float32 |
+| generator/B1/up_conv_shortcut/kernel:0           | (1, 1, 1536, 1536) |  2,359,296 | float32 |
+| generator/B1/up_conv_shortcut/bias:0             |            (1536,) |      1,536 | float32 |
+| generator/B2/bn1/condition/gamma/kernel:0        |        (148, 1536) |    227,328 | float32 |
+| generator/B2/bn1/condition/beta/kernel:0         |        (148, 1536) |    227,328 | float32 |
+| generator/B2/up_conv1/kernel:0                   |  (3, 3, 1536, 768) | 10,616,832 | float32 |
+| generator/B2/up_conv1/bias:0                     |             (768,) |        768 | float32 |
+| generator/B2/bn2/condition/gamma/kernel:0        |         (148, 768) |    113,664 | float32 |
+| generator/B2/bn2/condition/beta/kernel:0         |         (148, 768) |    113,664 | float32 |
+| generator/B2/same_conv2/kernel:0                 |   (3, 3, 768, 768) |  5,308,416 | float32 |
+| generator/B2/same_conv2/bias:0                   |             (768,) |        768 | float32 |
+| generator/B2/up_conv_shortcut/kernel:0           |  (1, 1, 1536, 768) |  1,179,648 | float32 |
+| generator/B2/up_conv_shortcut/bias:0             |             (768,) |        768 | float32 |
+| generator/B3/bn1/condition/gamma/kernel:0        |         (148, 768) |    113,664 | float32 |
+| generator/B3/bn1/condition/beta/kernel:0         |         (148, 768) |    113,664 | float32 |
+| generator/B3/up_conv1/kernel:0                   |   (3, 3, 768, 384) |  2,654,208 | float32 |
+| generator/B3/up_conv1/bias:0                     |             (384,) |        384 | float32 |
+| generator/B3/bn2/condition/gamma/kernel:0        |         (148, 384) |     56,832 | float32 |
+| generator/B3/bn2/condition/beta/kernel:0         |         (148, 384) |     56,832 | float32 |
+| generator/B3/same_conv2/kernel:0                 |   (3, 3, 384, 384) |  1,327,104 | float32 |
+| generator/B3/same_conv2/bias:0                   |             (384,) |        384 | float32 |
+| generator/B3/up_conv_shortcut/kernel:0           |   (1, 1, 768, 384) |    294,912 | float32 |
+| generator/B3/up_conv_shortcut/bias:0             |             (384,) |        384 | float32 |
+| generator/B4/bn1/condition/gamma/kernel:0        |         (148, 384) |     56,832 | float32 |
+| generator/B4/bn1/condition/beta/kernel:0         |         (148, 384) |     56,832 | float32 |
+| generator/B4/up_conv1/kernel:0                   |   (3, 3, 384, 192) |    663,552 | float32 |
+| generator/B4/up_conv1/bias:0                     |             (192,) |        192 | float32 |
+| generator/B4/bn2/condition/gamma/kernel:0        |         (148, 192) |     28,416 | float32 |
+| generator/B4/bn2/condition/beta/kernel:0         |         (148, 192) |     28,416 | float32 |
+| generator/B4/same_conv2/kernel:0                 |   (3, 3, 192, 192) |    331,776 | float32 |
+| generator/B4/same_conv2/bias:0                   |             (192,) |        192 | float32 |
+| generator/B4/up_conv_shortcut/kernel:0           |   (1, 1, 384, 192) |     73,728 | float32 |
+| generator/B4/up_conv_shortcut/bias:0             |             (192,) |        192 | float32 |
+| generator/non_local_block/conv2d_theta/kernel:0  |    (1, 1, 192, 24) |      4,608 | float32 |
+| generator/non_local_block/conv2d_phi/kernel:0    |    (1, 1, 192, 24) |      4,608 | float32 |
+| generator/non_local_block/conv2d_g/kernel:0      |    (1, 1, 192, 96) |     18,432 | float32 |
+| generator/non_local_block/sigma:0                |                 () |          1 | float32 |
+| generator/non_local_block/conv2d_attn_g/kernel:0 |    (1, 1, 96, 192) |     18,432 | float32 |
+| generator/B5/bn1/condition/gamma/kernel:0        |         (148, 192) |     28,416 | float32 |
+| generator/B5/bn1/condition/beta/kernel:0         |         (148, 192) |     28,416 | float32 |
+| generator/B5/up_conv1/kernel:0                   |    (3, 3, 192, 96) |    165,888 | float32 |
+| generator/B5/up_conv1/bias:0                     |              (96,) |         96 | float32 |
+| generator/B5/bn2/condition/gamma/kernel:0        |          (148, 96) |     14,208 | float32 |
+| generator/B5/bn2/condition/beta/kernel:0         |          (148, 96) |     14,208 | float32 |
+| generator/B5/same_conv2/kernel:0                 |     (3, 3, 96, 96) |     82,944 | float32 |
+| generator/B5/same_conv2/bias:0                   |              (96,) |         96 | float32 |
+| generator/B5/up_conv_shortcut/kernel:0           |    (1, 1, 192, 96) |     18,432 | float32 |
+| generator/B5/up_conv_shortcut/bias:0             |              (96,) |         96 | float32 |
+| generator/final_norm/gamma:0                     |              (96,) |         96 | float32 |
+| generator/final_norm/beta:0                      |              (96,) |         96 | float32 |
+| generator/final_conv/kernel:0                    |      (3, 3, 96, 3) |      2,592 | float32 |
+| generator/final_conv/bias:0                      |               (3,) |          3 | float32 |
++--------------------------------------------------+--------------------+------------+---------+
+Total: 70,433,988
+I1011 06:59:46.958602 139866928301888 utils.py:174] 
+Discriminator variables:
++------------------------------------------------------+--------------------+------------+---------+
+| Name                                                 | Shape              | Size       | Type    |
++------------------------------------------------------+--------------------+------------+---------+
+| discriminator/B1/same_conv1/kernel:0                 |      (3, 3, 3, 96) |      2,592 | float32 |
+| discriminator/B1/same_conv1/bias:0                   |              (96,) |         96 | float32 |
+| discriminator/B1/down_conv2/kernel:0                 |     (3, 3, 96, 96) |     82,944 | float32 |
+| discriminator/B1/down_conv2/bias:0                   |              (96,) |         96 | float32 |
+| discriminator/B1/down_conv_shortcut/kernel:0         |      (1, 1, 3, 96) |        288 | float32 |
+| discriminator/B1/down_conv_shortcut/bias:0           |              (96,) |         96 | float32 |
+| discriminator/non_local_block/conv2d_theta/kernel:0  |     (1, 1, 96, 12) |      1,152 | float32 |
+| discriminator/non_local_block/conv2d_phi/kernel:0    |     (1, 1, 96, 12) |      1,152 | float32 |
+| discriminator/non_local_block/conv2d_g/kernel:0      |     (1, 1, 96, 48) |      4,608 | float32 |
+| discriminator/non_local_block/sigma:0                |                 () |          1 | float32 |
+| discriminator/non_local_block/conv2d_attn_g/kernel:0 |     (1, 1, 48, 96) |      4,608 | float32 |
+| discriminator/B2/same_conv1/kernel:0                 |    (3, 3, 96, 192) |    165,888 | float32 |
+| discriminator/B2/same_conv1/bias:0                   |             (192,) |        192 | float32 |
+| discriminator/B2/down_conv2/kernel:0                 |   (3, 3, 192, 192) |    331,776 | float32 |
+| discriminator/B2/down_conv2/bias:0                   |             (192,) |        192 | float32 |
+| discriminator/B2/down_conv_shortcut/kernel:0         |    (1, 1, 96, 192) |     18,432 | float32 |
+| discriminator/B2/down_conv_shortcut/bias:0           |             (192,) |        192 | float32 |
+| discriminator/B3/same_conv1/kernel:0                 |   (3, 3, 192, 384) |    663,552 | float32 |
+| discriminator/B3/same_conv1/bias:0                   |             (384,) |        384 | float32 |
+| discriminator/B3/down_conv2/kernel:0                 |   (3, 3, 384, 384) |  1,327,104 | float32 |
+| discriminator/B3/down_conv2/bias:0                   |             (384,) |        384 | float32 |
+| discriminator/B3/down_conv_shortcut/kernel:0         |   (1, 1, 192, 384) |     73,728 | float32 |
+| discriminator/B3/down_conv_shortcut/bias:0           |             (384,) |        384 | float32 |
+| discriminator/B4/same_conv1/kernel:0                 |   (3, 3, 384, 768) |  2,654,208 | float32 |
+| discriminator/B4/same_conv1/bias:0                   |             (768,) |        768 | float32 |
+| discriminator/B4/down_conv2/kernel:0                 |   (3, 3, 768, 768) |  5,308,416 | float32 |
+| discriminator/B4/down_conv2/bias:0                   |             (768,) |        768 | float32 |
+| discriminator/B4/down_conv_shortcut/kernel:0         |   (1, 1, 384, 768) |    294,912 | float32 |
+| discriminator/B4/down_conv_shortcut/bias:0           |             (768,) |        768 | float32 |
+| discriminator/B5/same_conv1/kernel:0                 |  (3, 3, 768, 1536) | 10,616,832 | float32 |
+| discriminator/B5/same_conv1/bias:0                   |            (1536,) |      1,536 | float32 |
+| discriminator/B5/down_conv2/kernel:0                 | (3, 3, 1536, 1536) | 21,233,664 | float32 |
+| discriminator/B5/down_conv2/bias:0                   |            (1536,) |      1,536 | float32 |
+| discriminator/B5/down_conv_shortcut/kernel:0         |  (1, 1, 768, 1536) |  1,179,648 | float32 |
+| discriminator/B5/down_conv_shortcut/bias:0           |            (1536,) |      1,536 | float32 |
+| discriminator/B6/same_conv1/kernel:0                 | (3, 3, 1536, 1536) | 21,233,664 | float32 |
+| discriminator/B6/same_conv1/bias:0                   |            (1536,) |      1,536 | float32 |
+| discriminator/B6/same_conv2/kernel:0                 | (3, 3, 1536, 1536) | 21,233,664 | float32 |
+| discriminator/B6/same_conv2/bias:0                   |            (1536,) |      1,536 | float32 |
+| discriminator/final_fc/kernel:0                      |          (1536, 1) |      1,536 | float32 |
+| discriminator/final_fc/bias:0                        |               (1,) |          1 | float32 |
+| discriminator/embedding_fc/kernel:0                  |       (1000, 1536) |  1,536,000 | float32 |
++------------------------------------------------------+--------------------+------------+---------+
+Total: 87,982,370
+I1011 06:59:46.960605 139866928301888 tpu_summaries.py:98] host_call_args: [<tf.Tensor 'ExpandDims_2:0' shape=(1,) dtype=int64>, <tf.Tensor 'ExpandDims:0' shape=(1,) dtype=float32>, <tf.Tensor 'ExpandDims_1:0' shape=(1,) dtype=float32>, <tf.Tensor 'strided_slice:0' shape=(64, 128, 128, 3) dtype=float32>, <tf.Tensor 'strided_slice_1:0' shape=(64, 128, 128, 3) dtype=float32>]
+I1011 06:59:46.964202 139866928301888 tpu_summaries.py:106] host_call_fn: args=(<tf.Tensor 'ExpandDims:0' shape=(1,) dtype=float32>, <tf.Tensor 'ExpandDims_1:0' shape=(1,) dtype=float32>, <tf.Tensor 'strided_slice:0' shape=(64, 128, 128, 3) dtype=float32>, <tf.Tensor 'strided_slice_1:0' shape=(64, 128, 128, 3) dtype=float32>)
+I1011 06:59:46.988581 139866928301888 modular_gan.py:335] Creating images summary for fake images: Tensor("strided_slice:0", shape=(64, 128, 128, 3), dtype=float32)
+I1011 06:59:47.005792 139866928301888 modular_gan.py:335] Creating images summary for fake images: Tensor("strided_slice_1:0", shape=(64, 128, 128, 3), dtype=float32)
+I1011 06:59:47.023360 139866928301888 estimator.py:1147] Done calling model_fn.
+I1011 06:59:50.125352 139866928301888 monitored_session.py:240] Graph was finalized.
+2019-10-11 06:59:50.145298: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 1999985000 Hz
+2019-10-11 06:59:50.150098: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0xcdbb220 executing computations on platform Host. Devices:
+2019-10-11 06:59:50.150155: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2019-10-11 06:59:51.978798: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0xcda40c0 executing computations on platform CUDA. Devices:
+2019-10-11 06:59:51.978842: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): Tesla K80, Compute Capability 3.7
+2019-10-11 06:59:51.978856: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (1): Tesla K80, Compute Capability 3.7
+2019-10-11 06:59:51.978879: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (2): Tesla K80, Compute Capability 3.7
+2019-10-11 06:59:51.978900: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (3): Tesla K80, Compute Capability 3.7
+2019-10-11 06:59:51.978910: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (4): Tesla K80, Compute Capability 3.7
+2019-10-11 06:59:51.978927: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (5): Tesla K80, Compute Capability 3.7
+2019-10-11 06:59:51.978940: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (6): Tesla K80, Compute Capability 3.7
+2019-10-11 06:59:51.978953: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (7): Tesla K80, Compute Capability 3.7
+2019-10-11 06:59:52.025134: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1640] Found device 0 with properties: 
+name: Tesla K80 major: 3 minor: 7 memoryClockRate(GHz): 0.8235
+pciBusID: 0000:15:00.0
+2019-10-11 06:59:52.029591: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1640] Found device 1 with properties: 
+name: Tesla K80 major: 3 minor: 7 memoryClockRate(GHz): 0.8235
+pciBusID: 0000:14:00.0
+2019-10-11 06:59:52.035775: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1640] Found device 2 with properties: 
+name: Tesla K80 major: 3 minor: 7 memoryClockRate(GHz): 0.8235
+pciBusID: 0000:11:00.0
+2019-10-11 06:59:52.040413: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1640] Found device 3 with properties: 
+name: Tesla K80 major: 3 minor: 7 memoryClockRate(GHz): 0.8235
+pciBusID: 0000:10:00.0
+2019-10-11 06:59:52.045649: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1640] Found device 4 with properties: 
+name: Tesla K80 major: 3 minor: 7 memoryClockRate(GHz): 0.8235
+pciBusID: 0000:0b:00.0
+2019-10-11 06:59:52.050074: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1640] Found device 5 with properties: 
+name: Tesla K80 major: 3 minor: 7 memoryClockRate(GHz): 0.8235
+pciBusID: 0000:0a:00.0
+2019-10-11 06:59:52.054929: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1640] Found device 6 with properties: 
+name: Tesla K80 major: 3 minor: 7 memoryClockRate(GHz): 0.8235
+pciBusID: 0000:07:00.0
+2019-10-11 06:59:52.059859: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1640] Found device 7 with properties: 
+name: Tesla K80 major: 3 minor: 7 memoryClockRate(GHz): 0.8235
+pciBusID: 0000:06:00.0
+2019-10-11 06:59:52.059932: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.1
+2019-10-11 06:59:52.060049: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcublas.so.10
+2019-10-11 06:59:52.060107: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcufft.so.10
+2019-10-11 06:59:52.060154: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcurand.so.10
+2019-10-11 06:59:52.060216: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusolver.so.10
+2019-10-11 06:59:52.060274: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusparse.so.10
+2019-10-11 06:59:52.060314: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
+2019-10-11 06:59:52.109437: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1717] Ignoring visible gpu device (device: 0, name: Tesla K80, pci bus id: 0000:15:00.0, compute capability: 3.7) with Cuda compute capability 3.7. The minimum required Cuda capability is 5.2.
+2019-10-11 06:59:52.115271: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1717] Ignoring visible gpu device (device: 1, name: Tesla K80, pci bus id: 0000:14:00.0, compute capability: 3.7) with Cuda compute capability 3.7. The minimum required Cuda capability is 5.2.
+2019-10-11 06:59:52.122193: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1717] Ignoring visible gpu device (device: 2, name: Tesla K80, pci bus id: 0000:11:00.0, compute capability: 3.7) with Cuda compute capability 3.7. The minimum required Cuda capability is 5.2.
+2019-10-11 06:59:52.127795: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1717] Ignoring visible gpu device (device: 3, name: Tesla K80, pci bus id: 0000:10:00.0, compute capability: 3.7) with Cuda compute capability 3.7. The minimum required Cuda capability is 5.2.
+2019-10-11 06:59:52.134029: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1717] Ignoring visible gpu device (device: 4, name: Tesla K80, pci bus id: 0000:0b:00.0, compute capability: 3.7) with Cuda compute capability 3.7. The minimum required Cuda capability is 5.2.
+2019-10-11 06:59:52.140828: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1717] Ignoring visible gpu device (device: 5, name: Tesla K80, pci bus id: 0000:0a:00.0, compute capability: 3.7) with Cuda compute capability 3.7. The minimum required Cuda capability is 5.2.
+2019-10-11 06:59:52.147584: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1717] Ignoring visible gpu device (device: 6, name: Tesla K80, pci bus id: 0000:07:00.0, compute capability: 3.7) with Cuda compute capability 3.7. The minimum required Cuda capability is 5.2.
+2019-10-11 06:59:52.154652: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1717] Ignoring visible gpu device (device: 7, name: Tesla K80, pci bus id: 0000:06:00.0, compute capability: 3.7) with Cuda compute capability 3.7. The minimum required Cuda capability is 5.2.
+2019-10-11 06:59:52.156017: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1181] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-10-11 06:59:52.156042: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1187]      0 1 2 3 4 5 6 7 
+2019-10-11 06:59:52.156070: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1200] 0:   N Y Y Y Y Y Y Y 
+2019-10-11 06:59:52.156085: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1200] 1:   Y N Y Y Y Y Y Y 
+2019-10-11 06:59:52.156100: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1200] 2:   Y Y N Y Y Y Y Y 
+2019-10-11 06:59:52.156114: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1200] 3:   Y Y Y N Y Y Y Y 
+2019-10-11 06:59:52.156130: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1200] 4:   Y Y Y Y N Y Y Y 
+2019-10-11 06:59:52.156149: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1200] 5:   Y Y Y Y Y N Y Y 
+2019-10-11 06:59:52.156163: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1200] 6:   Y Y Y Y Y Y N Y 
+2019-10-11 06:59:52.156181: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1200] 7:   Y Y Y Y Y Y Y N 
+W1011 06:59:52.162690 139866928301888 deprecation.py:323] From /usr/local/lib/python3.6/dist-packages/tensorflow/python/training/saver.py:1276: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+I1011 06:59:52.165249 139866928301888 saver.py:1280] Restoring parameters from /gdata/fengrl/compare_gan/model.ckpt-0
+2019-10-11 06:59:53.456786: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+W1011 07:00:12.379258 139866928301888 deprecation.py:323] From /usr/local/lib/python3.6/dist-packages/tensorflow/python/training/saver.py:1066: get_checkpoint_mtimes (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file utilities to get mtimes.
+I1011 07:00:13.064344 139866928301888 session_manager.py:500] Running local_init_op.
+I1011 07:00:13.266941 139866928301888 session_manager.py:502] Done running local_init_op.
+W1011 07:00:14.472766 139866928301888 deprecation_wrapper.py:119] From /usr/local/lib/python3.6/dist-packages/gin/tf/utils.py:120: The name tf.gfile.GFile is deprecated. Please use tf.io.gfile.GFile instead.
+
+W1011 07:00:14.494087 139866928301888 deprecation_wrapper.py:119] From /usr/local/lib/python3.6/dist-packages/gin/tf/utils.py:138: The name tf.summary.FileWriterCache is deprecated. Please use tf.compat.v1.summary.FileWriterCache instead.
+
+I1011 07:00:16.518337 139844328089344 async_checkpoint.py:153] Saving checkpoints for 0 into /gdata/fengrl/compare_gan/model.ckpt.
+I1011 07:00:40.951903 139844328089344 async_checkpoint.py:170] Checkpoint actual writing time: (24.350 sec)
+I1011 07:00:40.953917 139844328089344 async_checkpoint.py:171] Checkpoint finished for 0 into /gdata/fengrl/compare_gan/model.ckpt.
+2019-10-11 07:08:05.522392: W ./tensorflow/core/framework/model.h:213] Encountered a stop event that was not preceded by a start event.
+2019-10-11 07:08:15.331671: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:111] Filling up shuffle buffer (this may take a while): 3675 of 10000
+2019-10-11 07:08:22.718346: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:162] Shuffle buffer filled.
+2019-10-11 07:10:35.313061: W tensorflow/core/framework/allocator.cc:107] Allocation of 34359738368 exceeds 10% of system memory.

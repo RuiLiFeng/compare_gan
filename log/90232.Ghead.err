@@ -1,0 +1,121 @@
+2019-10-11 06:15:12.998175: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.1
+WARNING: Logging before flag parsing goes to stderr.
+W1011 06:15:14.668419 140556677199680 deprecation_wrapper.py:119] From /usr/local/lib/python3.6/dist-packages/tensorflow_gan/python/contrib_utils.py:48: The name tf.GraphKeys is deprecated. Please use tf.compat.v1.GraphKeys instead.
+
+W1011 06:15:14.668603 140556677199680 deprecation_wrapper.py:119] From /usr/local/lib/python3.6/dist-packages/tensorflow_gan/python/contrib_utils.py:80: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+W1011 06:15:14.681461 140556677199680 deprecation_wrapper.py:119] From /usr/local/lib/python3.6/dist-packages/tensorflow_gan/python/losses/losses_impl.py:73: The name tf.losses.Reduction is deprecated. Please use tf.compat.v1.losses.Reduction instead.
+
+W1011 06:15:14.683528 140556677199680 deprecation_wrapper.py:119] From /usr/local/lib/python3.6/dist-packages/tensorflow_gan/python/train.py:766: The name tf.losses.absolute_difference is deprecated. Please use tf.compat.v1.losses.absolute_difference instead.
+
+W1011 06:15:14.683721 140556677199680 deprecation_wrapper.py:119] From /usr/local/lib/python3.6/dist-packages/tensorflow_gan/python/train.py:768: The name tf.losses.softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.softmax_cross_entropy instead.
+
+W1011 06:15:14.683896 140556677199680 deprecation_wrapper.py:119] From /usr/local/lib/python3.6/dist-packages/tensorflow_gan/python/train.py:1037: The name tf.train.SessionRunHook is deprecated. Please use tf.estimator.SessionRunHook instead.
+
+W1011 06:15:15.610629 140556677199680 lazy_loader.py:50] 
+The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+  * https://github.com/tensorflow/io (for I/O related ops)
+If you depend on functionality not listed there, please file an issue.
+
+W1011 06:15:15.633775 140556677199680 deprecation_wrapper.py:119] From /usr/local/lib/python3.6/dist-packages/gin/tf/utils.py:34: The name tf.gfile.Open is deprecated. Please use tf.io.gfile.GFile instead.
+
+W1011 06:15:15.633924 140556677199680 deprecation_wrapper.py:119] From /usr/local/lib/python3.6/dist-packages/gin/tf/utils.py:34: The name tf.gfile.Exists is deprecated. Please use tf.io.gfile.exists instead.
+
+W1011 06:15:15.637752 140556677199680 deprecation_wrapper.py:119] From /ghome/fengrl/compare_gan/compare_gan/architectures/abstract_arch.py:71: The name tf.AUTO_REUSE is deprecated. Please use tf.compat.v1.AUTO_REUSE instead.
+
+W1011 06:15:15.661971 140556677199680 deprecation_wrapper.py:119] From /ghome/fengrl/compare_gan/compare_gan/gans/modular_gan.py:70: The name tf.train.AdamOptimizer is deprecated. Please use tf.compat.v1.train.AdamOptimizer instead.
+
+W1011 06:15:15.664711 140556677199680 deprecation_wrapper.py:119] From /usr/local/lib/python3.6/dist-packages/gin/tf/external_configurables.py:32: The name tf.train.exponential_decay is deprecated. Please use tf.compat.v1.train.exponential_decay instead.
+
+W1011 06:15:15.664897 140556677199680 deprecation_wrapper.py:119] From /usr/local/lib/python3.6/dist-packages/gin/tf/external_configurables.py:33: The name tf.train.inverse_time_decay is deprecated. Please use tf.compat.v1.train.inverse_time_decay instead.
+
+W1011 06:15:15.665191 140556677199680 deprecation_wrapper.py:119] From /usr/local/lib/python3.6/dist-packages/gin/tf/external_configurables.py:50: The name tf.losses.hinge_loss is deprecated. Please use tf.compat.v1.losses.hinge_loss instead.
+
+W1011 06:15:15.665353 140556677199680 deprecation_wrapper.py:119] From /usr/local/lib/python3.6/dist-packages/gin/tf/external_configurables.py:51: The name tf.losses.huber_loss is deprecated. Please use tf.compat.v1.losses.huber_loss instead.
+
+I1011 06:15:15.667532 140556677199680 main.py:111] Gin config: ['/ghome/fengrl/compare_gan-master/example_configs/biggan_imagenet128.gin']
+Gin bindings: []
+I1011 06:15:15.683006 140556677199680 runner_lib.py:302] Running schedule 'train' with options: {'use_tpu': False, 'batch_size': 2048, 'gan_class': <class 'compare_gan.gans.modular_gan.ModularGAN'>, 'architecture': 'resnet_biggan_arch', 'training_steps': 250000, 'lambda': 1, 'disc_iters': 2, 'z_dim': 120}
+W1011 06:15:15.683177 140556677199680 deprecation_wrapper.py:119] From /ghome/fengrl/compare_gan/compare_gan/gans/utils.py:28: The name tf.gfile.IsDirectory is deprecated. Please use tf.io.gfile.isdir instead.
+
+I1011 06:15:15.684165 140556677199680 datasets.py:103] ImageDatasetV2(name=imagenet_128, tfds_name=imagenet2012, resolution=128, colors=3, num_classes=1000, eval_test_samples=50000, seed=547)
+I1011 06:15:15.685038 140556677199680 hooks.py:129] Creating ReportProgressHook to report progress every 100 steps.
+I1011 06:15:15.685123 140556677199680 runner_lib.py:325] Using AsyncCheckpointSaverHook.
+I1011 06:15:15.685332 140556677199680 async_checkpoint.py:67] Create AsyncCheckpointSaverHook.
+W1011 06:15:15.685784 140556677199680 estimator.py:1984] Estimator's model_fn (<bound method ModularGAN.model_fn of <compare_gan.gans.modular_gan.ModularGAN object at 0x7fd48a4ffb38>>) includes params argument, but params are not passed to Estimator.
+I1011 06:15:15.686817 140556677199680 estimator.py:209] Using config: {'_model_dir': '/gdata/fengrl/compare_gan', '_tf_random_seed': None, '_save_summary_steps': 100, '_save_checkpoints_steps': 1000000, '_save_checkpoints_secs': None, '_session_config': allow_soft_placement: true
+graph_options {
+  rewrite_options {
+    meta_optimizer_iterations: ONE
+  }
+}
+, '_keep_checkpoint_max': 1000, '_keep_checkpoint_every_n_hours': 10000, '_log_step_count_steps': None, '_train_distribute': None, '_device_fn': None, '_protocol': None, '_eval_distribute': None, '_experimental_distribute': None, '_experimental_max_worker_delay_secs': None, '_service': None, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x7fd48a4bc240>, '_task_type': 'worker', '_task_id': 0, '_global_id_in_cluster': 0, '_master': '', '_evaluation_master': '', '_is_chief': True, '_num_ps_replicas': 0, '_num_worker_replicas': 1, '_tpu_config': TPUConfig(iterations_per_loop=500, num_shards=None, num_cores_per_replica=None, per_host_input_for_training=2, tpu_job_name=None, initial_infeed_sleep_secs=None, input_partition_dims=None, eval_training_input_configuration=2), '_cluster': None}
+I1011 06:15:15.688077 140556677199680 tpu_context.py:209] _TPUContext: eval_on_tpu True
+W1011 06:15:15.688284 140556677199680 tpu_context.py:211] eval_on_tpu ignored because use_tpu is False.
+W1011 06:15:15.749332 140556677199680 deprecation.py:323] From /usr/local/lib/python3.6/dist-packages/tensorflow/python/training/training_util.py:236: Variable.initialized_value (from tensorflow.python.ops.variables) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use Variable.read_value. Variables in 2.X are initialized automatically both in eager and graph (inside tf.defun) contexts.
+W1011 06:15:15.767495 140556677199680 datasets.py:166] No TPUContext, using unmodified dataset seed 547.
+I1011 06:15:15.767673 140556677199680 datasets.py:276] train_input_fn(): params={'batch_size': 2048} seed=547
+I1011 06:15:15.769301 140556677199680 dataset_builder.py:160] Load pre-computed datasetinfo (eg: splits) from bucket.
+I1011 06:15:19.279980 140556677199680 dataset_info.py:362] No GCS info files found for imagenet2012/2.0.0
+E1011 06:15:19.280945 140556677199680 error_handling.py:70] Error recorded from training_loop: /gpub; Permission denied
+I1011 06:15:19.281105 140556677199680 error_handling.py:96] training_loop marked as finished
+W1011 06:15:19.281301 140556677199680 error_handling.py:130] Reraising captured error
+Traceback (most recent call last):
+  File "/ghome/fengrl/compare_gan/compare_gan/main.py", line 135, in <module>
+    app.run(main)
+  File "/usr/local/lib/python3.6/dist-packages/absl/app.py", line 300, in run
+    _run_main(main, args)
+  File "/usr/local/lib/python3.6/dist-packages/absl/app.py", line 251, in _run_main
+    sys.exit(main(argv))
+  File "/ghome/fengrl/compare_gan/compare_gan/main.py", line 129, in main
+    eval_every_steps=FLAGS.eval_every_steps)
+  File "/ghome/fengrl/compare_gan/compare_gan/runner_lib.py", line 337, in run_with_schedule
+    hooks=train_hooks)
+  File "/usr/local/lib/python3.6/dist-packages/tensorflow_estimator/python/estimator/tpu/tpu_estimator.py", line 2876, in train
+    rendezvous.raise_errors()
+  File "/usr/local/lib/python3.6/dist-packages/tensorflow_estimator/python/estimator/tpu/error_handling.py", line 131, in raise_errors
+    six.reraise(typ, value, traceback)
+  File "/usr/local/lib/python3.6/dist-packages/six.py", line 693, in reraise
+    raise value
+  File "/usr/local/lib/python3.6/dist-packages/tensorflow_estimator/python/estimator/tpu/tpu_estimator.py", line 2871, in train
+    saving_listeners=saving_listeners)
+  File "/usr/local/lib/python3.6/dist-packages/tensorflow_estimator/python/estimator/estimator.py", line 367, in train
+    loss = self._train_model(input_fn, hooks, saving_listeners)
+  File "/usr/local/lib/python3.6/dist-packages/tensorflow_estimator/python/estimator/estimator.py", line 1158, in _train_model
+    return self._train_model_default(input_fn, hooks, saving_listeners)
+  File "/usr/local/lib/python3.6/dist-packages/tensorflow_estimator/python/estimator/estimator.py", line 1185, in _train_model_default
+    input_fn, ModeKeys.TRAIN))
+  File "/usr/local/lib/python3.6/dist-packages/tensorflow_estimator/python/estimator/estimator.py", line 1022, in _get_features_and_labels_from_input_fn
+    self._call_input_fn(input_fn, mode))
+  File "/usr/local/lib/python3.6/dist-packages/tensorflow_estimator/python/estimator/tpu/tpu_estimator.py", line 2828, in _call_input_fn
+    return input_fn(**kwargs)
+  File "/ghome/fengrl/compare_gan/compare_gan/gans/modular_gan.py", line 426, in input_fn
+    preprocess_fn=self._preprocess_fn)
+  File "/ghome/fengrl/compare_gan/compare_gan/datasets.py", line 324, in input_fn
+    return self.train_input_fn(params=params, preprocess_fn=preprocess_fn)
+  File "/ghome/fengrl/compare_gan/compare_gan/datasets.py", line 278, in train_input_fn
+    ds = self._load_dataset(split=self._train_split)
+  File "/ghome/fengrl/compare_gan/compare_gan/datasets.py", line 244, in _load_dataset
+    as_dataset_kwargs={"shuffle_files": False})
+  File "/usr/local/lib/python3.6/dist-packages/tensorflow_datasets/core/api_utils.py", line 52, in disallow_positional_args_dec
+    return fn(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/tensorflow_datasets/core/registered.py", line 253, in load
+    dbuilder.download_and_prepare(**download_and_prepare_kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/tensorflow_datasets/core/api_utils.py", line 52, in disallow_positional_args_dec
+    return fn(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/tensorflow_datasets/core/dataset_builder.py", line 198, in download_and_prepare
+    download_config=download_config)
+  File "/usr/local/lib/python3.6/dist-packages/tensorflow_datasets/core/dataset_builder.py", line 454, in _make_download_manager
+    force_extraction=(download_config.download_mode == FORCE_REDOWNLOAD),
+  File "/usr/local/lib/python3.6/dist-packages/tensorflow_datasets/core/api_utils.py", line 52, in disallow_positional_args_dec
+    return fn(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/tensorflow_datasets/core/download/download_manager.py", line 163, in __init__
+    tf.io.gfile.makedirs(self._download_dir)
+  File "/usr/local/lib/python3.6/dist-packages/tensorflow/python/lib/io/file_io.py", line 453, in recursive_create_dir_v2
+    pywrap_tensorflow.RecursivelyCreateDir(compat.as_bytes(path))
+tensorflow.python.framework.errors_impl.PermissionDeniedError: /gpub; Permission denied

@@ -1,0 +1,16 @@
+  #PBS    -N  test_biggan
+  #PBS    -o  /ghome/fengrl/compare_gan/log/$PBS_JOBID.out
+  #PBS    -e  /ghome/fengrl/compare_gan/log/$PBS_JOBID.err
+  #PBS    -l nodes=1:gpus=8:E,walltime=500:00:00
+  #PBS    -r y
+  #PBS    -q mcc
+  cd $PBS_O_WORKDIR
+  echo Time is `date`
+  echo Directory is $PWD
+  echo This job runs on following nodes:
+  echo -n "Node:"
+  cat $PBS_NODEFILE
+  echo -n "Gpus:"
+  cat $PBS_GPUFILE
+  echo "CUDA_VISIBLE_DEVICES:"$CUDA_VISIBLE_DEVICES
+  startdocker -D /gdata/fengrl/compare_gan -P /ghome/fengrl -u "-v /gpub:/gpub --ipc=host -i" -c "python /ghome/fengrl/compare_gan/compare_gan/main.py --log_dir /gdata/fengrl/compare_gan/log --model_dir /gdata/fengrl/compare_gan --gin_config /ghome/fengrl/compare_gan-master/example_configs/biggan_imagenet128.gin"  bit:5000/fengrl-k80-gin-tf

@@ -1,0 +1,43 @@
+Time is Fri Oct 11 14:15:02 CST 2019
+Directory is /ghome/fengrl/compare_gan
+This job runs on following nodes:
+Node:G138
+Gpus:G138-gpu7
+G138-gpu6
+G138-gpu5
+G138-gpu4
+G138-gpu3
+G138-gpu2
+G138-gpu1
+G138-gpu0
+CUDA_VISIBLE_DEVICES:7,6,5,4,3,2,1,0
+                                                                                                                                                
+================
+== TensorFlow ==
+================
+
+NVIDIA Release 19.07 (build 7332442)
+TensorFlow Version 1.14.0
+
+Container image Copyright (c) 2019, NVIDIA CORPORATION.  All rights reserved.
+Copyright 2017-2019 The TensorFlow Authors.  All rights reserved.
+
+Various files include modifications (c) NVIDIA CORPORATION.  All rights reserved.
+NVIDIA modifications are covered by the license terms that apply to the underlying project or file.
+ERROR: Detected NVIDIA Tesla K80 GPU, which is not supported by this container
+ERROR: Detected NVIDIA Tesla K80 GPU, which is not supported by this container
+ERROR: Detected NVIDIA Tesla K80 GPU, which is not supported by this container
+ERROR: Detected NVIDIA Tesla K80 GPU, which is not supported by this container
+ERROR: Detected NVIDIA Tesla K80 GPU, which is not supported by this container
+ERROR: Detected NVIDIA Tesla K80 GPU, which is not supported by this container
+ERROR: Detected NVIDIA Tesla K80 GPU, which is not supported by this container
+ERROR: Detected NVIDIA Tesla K80 GPU, which is not supported by this container
+ERROR: No supported GPU(s) detected to run this container
+
+NOTE: MOFED driver for multi-node communication was not detected.
+      Multi-node communication performance may be reduced.
+
+NOTE: The SHMEM allocation limit is set to the default of 64MB.  This may be
+   insufficient for TensorFlow.  NVIDIA recommends the use of the following flags:
+   nvidia-docker run --shm-size=1g --ulimit memlock=-1 --ulimit stack=67108864 ...
+
