@@ -88,8 +88,11 @@ def _get_run_config(tf_random_seed=None,
   tpu_config = tf.contrib.tpu.TPUConfig(
       num_shards=1 if single_core else None,  # None = all cores.
       iterations_per_loop=iterations_per_loop)
+  strategy= tf.contrib.distribute.MirroredStrategy(num_gpus=8)
   return tf.contrib.tpu.RunConfig(
       model_dir=FLAGS.model_dir,
+      eval_distribute=strategy,
+      train_distribute=strategy,
       tf_random_seed=tf_random_seed,
       save_checkpoints_steps=save_checkpoints_steps,
       keep_checkpoint_max=keep_checkpoint_max,
