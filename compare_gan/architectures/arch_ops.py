@@ -300,8 +300,8 @@ def standardize_batch(inputs,
     n = ctx.num_replicas_in_sync
     mean, mean_sq = ctx.all_reduce(
         tf.distribute.ReduceOp.SUM,
-        [tf.reduce_mean(inputs, axis=0) / n,
-         tf.reduce_mean(inputs ** 2, axis=0) / n]
+        [tf.reduce_mean(inputs, axis=reduction_axes) / n,
+         tf.reduce_mean(inputs ** 2, axis=reduction_axes) / n]
     )
     variance = mean_sq - mean ** 2
 
