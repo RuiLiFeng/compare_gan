@@ -88,7 +88,7 @@ def _get_run_config(tf_random_seed=None,
   tpu_config = tf.contrib.tpu.TPUConfig(
       num_shards=1 if single_core else None,  # None = all cores.
       iterations_per_loop=iterations_per_loop)
-  devices = ["/device:GPU:%d" % gpu for gpu in range(8)]
+  devices = ["/device:XLA_GPU:%d" % gpu for gpu in range(8)]
   strategy = tf.distribute.MirroredStrategy(devices=devices,
                                             cross_device_ops=tf.contrib.distribute.AllReduceCrossDeviceOps(
                                                 all_reduce_alg="hierarchical_copy"))
