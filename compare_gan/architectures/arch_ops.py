@@ -291,19 +291,10 @@ def standardize_batch(inputs,
   if use_cross_replica_mean:
     mean, variance = tpu_ops.cross_replica_moments(inputs, reduction_axes)
   else:
-    # counts, mean_ss, variance_ss, _ = tf.nn.sufficient_statistics(
-    #     inputs, reduction_axes, keep_dims=False)
-    # mean, variance = tf.nn.normalize_moments(
-    #     counts, mean_ss, variance_ss, shift=None)
-    # Multi-Gpu version
-    ctx = tf.distribute.get_replica_context()
-    n = ctx.num_replicas_in_sync
-    mean, mean_sq = ctx.all_reduce(
-        tf.distribute.ReduceOp.SUM,
-        [tf.reduce_mean(inputs, axis=reduction_axes) / n,
-         tf.reduce_mean(inputs ** 2, axis=reduction_axes) / n]
-    )
-    variance = mean_sq - mean ** 2
+    counts, mean_ss, variance_ss, _ = tf.nn.sufficient_statistics(
+        inputs, reduction_axes, keep_dims=False)
+    mean, variance = tf.nn.normalize_moments(
+        counts, mean_ss, variance_ss, shift=None)
 
   if use_moving_averages:
     mean, variance = _moving_moments_for_inference(
@@ -503,7 +494,8 @@ def spectral_norm(inputs, epsilon=1e-12, singular_value="left"):
       shape=u_shape,
       dtype=w.dtype,
       initializer=tf.random_normal_initializer(),
-      trainable=False)
+      trainable=False,
+      aggregation=tf.VariableAggregation.MEAN)
   u = u_var
 
   # Use power iteration method to approximate the spectral norm.
