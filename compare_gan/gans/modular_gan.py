@@ -497,7 +497,7 @@ class ModularGAN(AbstractGAN):
           global_step=step)
       if self._g_use_ema:
         g_vars = self.generator.trainable_variables
-        with tf.VariableScope(name_scope="generator_ema", reuse=tf.AUTO_REUSE):
+        with tf.variable_scope(name_or_scope="generator_ema", reuse=tf.AUTO_REUSE):
           logging.info("Creating moving averages of weights: %s", g_vars)
           # The decay value is set to 0 if we're before the moving-average start
           # point, so that the EMA vars will be the normal vars.
