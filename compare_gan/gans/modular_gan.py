@@ -543,7 +543,7 @@ class ModularGAN(AbstractGAN):
     self._tpu_summary = tpu_summaries.TpuSummaries(self._model_dir)
 
     # Get features for each sub-step.
-    with tf.VariableScope('TopGraph', reuse=tf.AUTO_REUSE):
+    with tf.VariableScope(name_scope='TopGraph', reuse=tf.AUTO_REUSE):
         fs, ls = self._split_inputs_and_generate_samples(
             features, labels, num_sub_steps=num_sub_steps)
 
