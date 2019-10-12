@@ -219,7 +219,7 @@ class ModularGAN(AbstractGAN):
     return tf.contrib.tpu.TPUEstimator(
         config=run_config,
         use_tpu=use_tpu,
-        model_fn=self.model_fn,
+        model_fn=tf.contrib.estimator.replicate_model_fn(self.model_fn),
         train_batch_size=batch_size * num_sub_steps)
 
   def _module_fn(self, model, batch_size):
@@ -505,7 +505,8 @@ class ModularGAN(AbstractGAN):
               tf.greater_equal(step, self._ema_start_step), tf.float32)
           ema = tf.train.ExponentialMovingAverage(decay=decay)
           with tf.control_dependencies([train_op]):
-            train_op = ema.apply(g_vars)
+              with tf.VariableScope(tf.get_variable_scope(), reuse=tf.AUTO_REUSE):
+                  train_op = ema.apply(g_vars)
       with tf.control_dependencies([train_op]):
         return tf.identity(self.g_loss)
 
@@ -604,13 +605,13 @@ class ModularGAN(AbstractGAN):
         train_op=g_loss.op)
 
   def get_disc_optimizer(self, use_tpu=True):
-    opt = self._d_optimizer_fn(self._d_lr, name="d_opt")
+    opt = tf.contrib.estimator.TowerOptimizer(self._d_optimizer_fn(self._d_lr, name="d_opt"))
     if use_tpu:
       opt = tf.contrib.tpu.CrossShardOptimizer(opt)
     return opt
 
   def get_gen_optimizer(self, use_tpu=True):
-    opt = self._g_optimizer_fn(self._g_lr, name="g_opt")
+    opt = tf.contrib.estimator.TowerOptimizer(self._g_optimizer_fn(self._g_lr, name="g_opt"))
     if use_tpu:
       opt = tf.contrib.tpu.CrossShardOptimizer(opt)
     return opt
