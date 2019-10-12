@@ -52,3 +52,5 @@ def rotate_images(images, rot90_scalars=(0, 1, 2, 3)):
 
 def gaussian(batch_size, n_dim, mean=0., var=1.):
   return np.random.normal(mean, var, (batch_size, n_dim)).astype(np.float32)
+
+
