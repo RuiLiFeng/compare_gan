@@ -497,7 +497,7 @@ class ModularGAN(AbstractGAN):
           global_step=step)
       if self._g_use_ema:
         g_vars = self.generator.trainable_variables
-        with tf.VariableScope("generator_ema", reuse=tf.AUTO_REUSE):
+        with tf.name_scope("generator_ema"):
           logging.info("Creating moving averages of weights: %s", g_vars)
           # The decay value is set to 0 if we're before the moving-average start
           # point, so that the EMA vars will be the normal vars.
@@ -543,57 +543,58 @@ class ModularGAN(AbstractGAN):
     self._tpu_summary = tpu_summaries.TpuSummaries(self._model_dir)
 
     # Get features for each sub-step.
-    fs, ls = self._split_inputs_and_generate_samples(
-        features, labels, num_sub_steps=num_sub_steps)
+    with tf.VariableScope('TopGraph', reuse=tf.AUTO_REUSE):
+        fs, ls = self._split_inputs_and_generate_samples(
+            features, labels, num_sub_steps=num_sub_steps)
 
-    disc_optimizer = self.get_disc_optimizer(params["use_tpu"])
-    disc_step = tf.get_variable(
-        "global_step_disc", [], dtype=tf.int32, trainable=False)
-    train_disc_fn = functools.partial(
-        self._train_discriminator,
-        step=disc_step,
-        optimizer=disc_optimizer,
-        params=params)
+        disc_optimizer = self.get_disc_optimizer(params["use_tpu"])
+        disc_step = tf.get_variable(
+            "global_step_disc", [], dtype=tf.int32, trainable=False)
+        train_disc_fn = functools.partial(
+            self._train_discriminator,
+            step=disc_step,
+            optimizer=disc_optimizer,
+            params=params)
 
-    gen_optimizer = self.get_gen_optimizer(params["use_tpu"])
-    gen_step = tf.train.get_or_create_global_step()
-    train_gen_fn = functools.partial(
-        self._train_generator,
-        features=fs[-1],
-        labels=ls[-1],
-        step=gen_step,
-        optimizer=gen_optimizer,
-        params=params)
+        gen_optimizer = self.get_gen_optimizer(params["use_tpu"])
+        gen_step = tf.train.get_or_create_global_step()
+        train_gen_fn = functools.partial(
+            self._train_generator,
+            features=fs[-1],
+            labels=ls[-1],
+            step=gen_step,
+            optimizer=gen_optimizer,
+            params=params)
 
-    if not unroll_graph and self._disc_iters != 1:
-      train_fn = train_gen_fn
-      train_gen_fn = lambda: tf.cond(
-          tf.equal(disc_step % self._disc_iters, 0), train_fn, lambda: 0.0)
+        if not unroll_graph and self._disc_iters != 1:
+          train_fn = train_gen_fn
+          train_gen_fn = lambda: tf.cond(
+              tf.equal(disc_step % self._disc_iters, 0), train_fn, lambda: 0.0)
 
-    # Train D.
-    d_losses = []
-    d_steps = self._disc_iters if unroll_graph else 1
-    for i in range(d_steps):
-      with tf.name_scope("disc_step_{}".format(i + 1)):
+        # Train D.
+        d_losses = []
+        d_steps = self._disc_iters if unroll_graph else 1
+        for i in range(d_steps):
+          with tf.name_scope("disc_step_{}".format(i + 1)):
+            with tf.control_dependencies(d_losses):
+              d_losses.append(train_disc_fn(features=fs[i], labels=ls[i]))
+
+        # Train G.
         with tf.control_dependencies(d_losses):
-          d_losses.append(train_disc_fn(features=fs[i], labels=ls[i]))
+          with tf.name_scope("gen_step"):
+            g_loss = train_gen_fn()
 
-    # Train G.
-    with tf.control_dependencies(d_losses):
-      with tf.name_scope("gen_step"):
-        g_loss = train_gen_fn()
+        for i, d_loss in enumerate(d_losses):
+          self._tpu_summary.scalar("loss/d_{}".format(i), d_loss)
+        self._tpu_summary.scalar("loss/g", g_loss)
+        self._add_images_to_summary(fs[0]["generated"], "fake_images", params)
+        self._add_images_to_summary(fs[0]["images"], "real_images", params)
 
-    for i, d_loss in enumerate(d_losses):
-      self._tpu_summary.scalar("loss/d_{}".format(i), d_loss)
-    self._tpu_summary.scalar("loss/g", g_loss)
-    self._add_images_to_summary(fs[0]["generated"], "fake_images", params)
-    self._add_images_to_summary(fs[0]["images"], "real_images", params)
-
-    self._check_variables()
-    utils.log_parameter_overview(self.generator.trainable_variables,
-                                 msg="Generator variables:")
-    utils.log_parameter_overview(self.discriminator.trainable_variables,
-                                 msg="Discriminator variables:")
+        self._check_variables()
+        utils.log_parameter_overview(self.generator.trainable_variables,
+                                     msg="Generator variables:")
+        utils.log_parameter_overview(self.discriminator.trainable_variables,
+                                     msg="Discriminator variables:")
 
     return tf.contrib.tpu.TPUEstimatorSpec(
         mode=mode,
