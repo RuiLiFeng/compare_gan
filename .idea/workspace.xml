@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="613ef6b5-b515-420b-a4b4-0852de03e8eb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/compare_gan/gans/modular_gan.py" beforeDir="false" afterPath="$PROJECT_DIR$/compare_gan/gans/modular_gan.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,8 +25,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/compare_gan/gans/modular_gan.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="383">
-              <caret line="506" column="51" lean-forward="true" selection-start-line="506" selection-start-column="51" selection-end-line="506" selection-end-column="51" />
+            <state relative-caret-position="419">
+              <caret line="507" column="42" lean-forward="true" selection-start-line="507" selection-start-column="42" selection-end-line="507" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -133,7 +134,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -214,7 +215,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21268000" />
+    <option name="totallyTimeSpent" value="21625000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -312,8 +313,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/compare_gan/gans/modular_gan.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="506" column="51" lean-forward="true" selection-start-line="506" selection-start-column="51" selection-end-line="506" selection-end-column="51" />
+        <state relative-caret-position="419">
+          <caret line="507" column="42" lean-forward="true" selection-start-line="507" selection-start-column="42" selection-end-line="507" selection-end-column="42" />
         </state>
       </provider>
     </entry>
