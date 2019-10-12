@@ -4,8 +4,8 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
-import tensorflow.python.distribute.shared_variable_creator as sv
-from tensorflow.python.distribute.shared_variable_creator import _canonicalize_variable_name
+import tensorflow.distribute.shared_variable_creator as sv
+from tensorflow.distribute.shared_variable_creator import _canonicalize_variable_name
 
 
 def make_fn(shared_variable_store, device_id):
