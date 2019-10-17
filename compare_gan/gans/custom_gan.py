@@ -506,11 +506,17 @@ class CustomGAN(AbstractGAN):
           # point, so that the EMA vars will be the normal vars.
           decay = self._ema_decay * tf.cast(
               tf.greater_equal(step, self._ema_start_step), tf.float32)
-          if decay > 0.5:
-          # ema = tf.train.ExponentialMovingAverage(decay=decay)
+          def true_fn(train_op):
               ema = self._ema
               with tf.control_dependencies([train_op]):
                   train_op = ema.apply(g_vars)
+              return train_op
+          def false_fn(): return None
+          tf.cond(decay > 0.5, true_fn(train_op), false_fn)
+          # ema = tf.train.ExponentialMovingAverage(decay=decay)
+          #     ema = self._ema
+          #     with tf.control_dependencies([train_op]):
+          #         train_op = ema.apply(g_vars)
       with tf.control_dependencies([train_op]):
         return tf.identity(self.g_loss)
 
