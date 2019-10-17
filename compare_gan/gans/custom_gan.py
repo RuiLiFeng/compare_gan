@@ -267,26 +267,26 @@ class CustomGAN(AbstractGAN):
     else:
       z = inputs["z"]
       generated = self.generator(z=z, y=y, is_training=is_training)
-      if self._g_use_ema and not is_training:
-        g_vars = [var for var in tf.trainable_variables()
-                  if "generator" in var.name]
-        # ema = tf.train.ExponentialMovingAverage(decay=self._ema_decay)
-        ema = self._ema
-        # Create the variables that will be loaded from the checkpoint.
-        ema.apply(g_vars)
-        def ema_getter(getter, name, *args, **kwargs):
-          var = getter(name, *args, **kwargs)
-          ema_var = ema.average(var)
-          if ema_var is None:
-            var_names_without_ema = {"u_var", "accu_mean", "accu_variance",
-                                     "accu_counter", "update_accus"}
-            if name.split("/")[-1] not in var_names_without_ema:
-              logging.warning("Could not find EMA variable for %s.", name)
-            return var
-          return ema_var
-        with tf.variable_scope("", values=[z, y], reuse=True,
-                               custom_getter=ema_getter):
-          generated = self.generator(z, y=y, is_training=is_training)
+      # if self._g_use_ema and not is_training:
+      #   g_vars = [var for var in tf.trainable_variables()
+      #             if "generator" in var.name]
+      #   # ema = tf.train.ExponentialMovingAverage(decay=self._ema_decay)
+      #   ema = self._ema
+      #   # Create the variables that will be loaded from the checkpoint.
+      #   ema.apply(g_vars)
+      #   def ema_getter(getter, name, *args, **kwargs):
+      #     var = getter(name, *args, **kwargs)
+      #     ema_var = ema.average(var)
+      #     if ema_var is None:
+      #       var_names_without_ema = {"u_var", "accu_mean", "accu_variance",
+      #                                "accu_counter", "update_accus"}
+      #       if name.split("/")[-1] not in var_names_without_ema:
+      #         logging.warning("Could not find EMA variable for %s.", name)
+      #       return var
+      #     return ema_var
+      #   with tf.variable_scope("", values=[z, y], reuse=True,
+      #                          custom_getter=ema_getter):
+      #     generated = self.generator(z, y=y, is_training=is_training)
       outputs["generated"] = generated
 
     hub.add_signature(inputs=inputs, outputs=outputs)
