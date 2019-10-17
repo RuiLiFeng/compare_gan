@@ -365,7 +365,7 @@ class CustomGAN(AbstractGAN):
           "_get_one_hot_labels() called but GAN is not conditional.")
     return tf.one_hot(labels, self._dataset.num_classes)
 
-  @gin.configurable("z", blacklist=["shape", "name"])
+  @gin.configurable("CustomGAN.z", blacklist=["shape", "name"])
   def z_generator(self, shape, distribution_fn=tf.random.uniform,
                   minval=-1.0, maxval=1.0, stddev=1.0, name=None):
     """Random noise distributions as TF op.
