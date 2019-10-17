@@ -112,7 +112,7 @@ class Generator(resnet_biggan.Generator):
         return super(Generator, self).apply(z=z, y=y, is_training=is_training)
 
 
-class Discriminator(resnet_biggan.Discriminator)
+class Discriminator(resnet_biggan.Discriminator):
     def __init__(self, **kwargs):
         super(Discriminator, self).__init__(**kwargs)
 
