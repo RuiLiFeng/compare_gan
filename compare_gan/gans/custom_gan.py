@@ -506,22 +506,12 @@ class CustomGAN(AbstractGAN):
           logging.info("Creating moving averages of weights: %s", g_vars)
           # The decay value is set to 0 if we're before the moving-average start
           # point, so that the EMA vars will be the normal vars.
-          decay = self._ema_decay * tf.cast(
-              tf.greater_equal(step, self._ema_start_step), tf.float32)
-          def true_fn(train_op):
-              ema = self._ema
-              with tf.control_dependencies([train_op]):
-                  train_op = ema.apply(g_vars)
-              return 1
-          def false_fn(train_op):
-              return 1
-          tfn = functools.partial(true_fn, train_op=train_op)
-          ffn = functools.partial(false_fn, train_op=train_op)
-          tf.cond(decay > 0.5, tfn, ffn)
+          # decay = self._ema_decay * tf.cast(
+          #     tf.greater_equal(step, self._ema_start_step), tf.float32)
           # ema = tf.train.ExponentialMovingAverage(decay=decay)
-          #     ema = self._ema
-          #     with tf.control_dependencies([train_op]):
-          #         train_op = ema.apply(g_vars)
+          ema = self._ema
+          with tf.control_dependencies([train_op]):
+              train_op = ema.apply(g_vars)
       with tf.control_dependencies([train_op]):
         return tf.identity(self.g_loss)
 

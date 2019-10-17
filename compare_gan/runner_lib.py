@@ -101,7 +101,10 @@ def get_options_dict(batch_size=gin.REQUIRED,
   """
   del discriminator_normalization
   if ema:
-      ema = tf.train.ExponentialMovingAverage(0.999)
+      gen_step = tf.train.get_or_create_global_step()
+      decay = 0.999 * tf.cast(
+               tf.greater_equal(gen_step, 250000), tf.float32)
+      ema = tf.train.ExponentialMovingAverage(decay)
   else:
       ema = None
   return {
