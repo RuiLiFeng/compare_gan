@@ -31,7 +31,6 @@ from absl import logging
 
 from compare_gan import datasets
 from compare_gan import runner_lib
-from compare_gan import custom_strategy
 # Import GAN types so that they can be used in Gin configs without module names.
 from compare_gan.gans.modular_gan import ModularGAN
 from compare_gan.gans.s3gan import S3GAN
@@ -90,7 +89,6 @@ def _get_run_config(tf_random_seed=None,
       num_shards=1 if single_core else None,  # None = all cores.
       iterations_per_loop=iterations_per_loop)
   devices = ["/device:GPU:%d" % gpu for gpu in range(8)]
-  custom_strategy.init_strategy()
   strategy = tf.distribute.MirroredStrategy(devices)
   return tf.contrib.tpu.RunConfig(
       model_dir=FLAGS.model_dir,
