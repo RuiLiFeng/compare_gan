@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="613ef6b5-b515-420b-a4b4-0852de03e8eb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/compare_gan/architectures/invert.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/compare_gan/gans/custom_gan.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/compare_gan/gans/invGAN.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/compare_gan/invBigBiGAN.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/compare_gan/custom_strategy.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/compare_gan/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/compare_gan/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,10 +27,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/compare_gan/runner_lib.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="105" column="16" lean-forward="true" selection-start-line="105" selection-start-column="16" selection-end-line="105" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/compare_gan/gans/modular_gan.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="11853">
-              <caret line="439" column="26" selection-start-line="439" selection-start-column="26" selection-end-line="439" selection-end-column="26" />
+            <state relative-caret-position="388">
+              <caret line="505" column="41" lean-forward="true" selection-start-line="505" selection-start-column="41" selection-end-line="505" selection-end-column="41" />
               <folding>
                 <element signature="e#666#704#0" expanded="true" />
               </folding>
@@ -47,8 +50,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/compare_gan/gans/custom_gan.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="632">
-              <caret line="506" column="51" lean-forward="true" selection-start-line="506" selection-start-column="51" selection-end-line="506" selection-end-column="51" />
+            <state relative-caret-position="-4047">
+              <caret line="511" column="46" lean-forward="true" selection-start-line="511" selection-start-column="46" selection-end-line="511" selection-end-column="46" />
               <folding>
                 <element signature="e#666#704#0" expanded="true" />
               </folding>
@@ -57,19 +60,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/compare_gan/tpu/tpu_ops.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2322">
-              <caret line="94" column="4" selection-start-line="94" selection-start-column="4" selection-end-line="94" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/compare_gan/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="102" lean-forward="true" selection-start-line="102" selection-end-line="102" />
+            <state relative-caret-position="388">
+              <caret line="124" column="31" lean-forward="true" selection-start-line="124" selection-start-column="31" selection-end-line="124" selection-end-column="31" />
               <folding>
                 <element signature="e#664#702#0" expanded="true" />
               </folding>
@@ -132,7 +126,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/compare_gan/gans/abstract_gan.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="891">
+            <state relative-caret-position="-368">
               <caret line="40" column="6" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="6" />
               <folding>
                 <element signature="e#682#720#0" expanded="true" />
@@ -157,6 +151,7 @@
       <find>moving</find>
       <find>_call_for_each_replica</find>
       <find>call_for_each_replica</find>
+      <find>parameter</find>
       <find>ema</find>
     </findStrings>
   </component>
@@ -175,6 +170,7 @@
         <option value="$PROJECT_DIR$/compare_gan/architectures/invert.py" />
         <option value="$PROJECT_DIR$/compare_gan/gans/invGAN.py" />
         <option value="$PROJECT_DIR$/compare_gan/invBigBiGAN.py" />
+        <option value="$PROJECT_DIR$/compare_gan/runner_lib.py" />
         <option value="$PROJECT_DIR$/compare_gan/gans/custom_gan.py" />
       </list>
     </option>
@@ -263,18 +259,17 @@
       <updated>1570794826145</updated>
       <workItem from="1570794854734" duration="13057000" />
       <workItem from="1570812182900" duration="4985000" />
-      <workItem from="1571276288773" duration="4780000" />
+      <workItem from="1571276288773" duration="6244000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44914000" />
+    <option name="totallyTimeSpent" value="46378000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1513" height="973" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19148937" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19148937" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -288,7 +283,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053304" side_tool="true" weight="0.27874187" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49946696" weight="0.29181495" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49946696" visible="true" weight="0.29181495" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.3499407" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -329,13 +324,6 @@
         <state relative-caret-position="-4941" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/compare_gan/runner_lib.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8613">
-          <caret line="339" column="35" selection-start-line="339" selection-start-column="35" selection-end-line="339" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/setup.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -360,16 +348,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2322">
           <caret line="94" column="4" selection-start-line="94" selection-start-column="4" selection-end-line="94" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/compare_gan/gans/abstract_gan.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="891">
-          <caret line="40" column="6" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="6" />
-          <folding>
-            <element signature="e#682#720#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -425,20 +403,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/compare_gan/gans/abstract_gan.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-368">
+          <caret line="40" column="6" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="6" />
+          <folding>
+            <element signature="e#682#720#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/compare_gan/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="102" lean-forward="true" selection-start-line="102" selection-end-line="102" />
+        <state relative-caret-position="388">
+          <caret line="124" column="31" lean-forward="true" selection-start-line="124" selection-start-column="31" selection-end-line="124" selection-end-column="31" />
           <folding>
             <element signature="e#664#702#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/compare_gan/runner_lib.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="105" column="16" lean-forward="true" selection-start-line="105" selection-start-column="16" selection-end-line="105" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/compare_gan/gans/modular_gan.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11853">
-          <caret line="439" column="26" selection-start-line="439" selection-start-column="26" selection-end-line="439" selection-end-column="26" />
+        <state relative-caret-position="388">
+          <caret line="505" column="41" lean-forward="true" selection-start-line="505" selection-start-column="41" selection-end-line="505" selection-end-column="41" />
           <folding>
             <element signature="e#666#704#0" expanded="true" />
           </folding>
@@ -447,8 +442,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/compare_gan/gans/custom_gan.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="632">
-          <caret line="506" column="51" lean-forward="true" selection-start-line="506" selection-start-column="51" selection-end-line="506" selection-end-column="51" />
+        <state relative-caret-position="-4047">
+          <caret line="511" column="46" lean-forward="true" selection-start-line="511" selection-start-column="46" selection-end-line="511" selection-end-column="46" />
           <folding>
             <element signature="e#666#704#0" expanded="true" />
           </folding>
