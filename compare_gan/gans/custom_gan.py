@@ -513,8 +513,10 @@ class CustomGAN(AbstractGAN):
               with tf.control_dependencies([train_op]):
                   train_op = ema.apply(g_vars)
               return train_op
+          def false_fn():
+              return None
           tfn = functools.partial(true_fn, train_op=train_op)
-          tf.cond(decay > 0.5, tfn)
+          tf.cond(decay > 0.5, tfn, false_fn)
           # ema = tf.train.ExponentialMovingAverage(decay=decay)
           #     ema = self._ema
           #     with tf.control_dependencies([train_op]):
