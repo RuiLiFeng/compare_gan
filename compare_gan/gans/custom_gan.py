@@ -52,6 +52,8 @@ import tensorflow_hub as hub
 
 FLAGS = flags.FLAGS
 
+module_dir = '/ghome/fengrl/compare_gan/bigbigan'
+
 
 # pylint: disable=not-callable
 @gin.configurable(blacklist=["dataset", "parameters", "model_dir"])
@@ -512,7 +514,7 @@ class CustomGAN(AbstractGAN):
                   train_op = ema.apply(g_vars)
               return train_op
           tfn = functools.partial(true_fn, train_op=train_op)
-          tf.cond(decay > 0.5, tfn, lambda: None)
+          tf.cond(decay > 0.5, tfn)
           # ema = tf.train.ExponentialMovingAverage(decay=decay)
           #     ema = self._ema
           #     with tf.control_dependencies([train_op]):
