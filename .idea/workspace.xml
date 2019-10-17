@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="613ef6b5-b515-420b-a4b4-0852de03e8eb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/compare_gan/gans/custom_gan.py" beforeDir="false" afterPath="$PROJECT_DIR$/compare_gan/gans/custom_gan.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/compare_gan/runner_lib.py" beforeDir="false" afterPath="$PROJECT_DIR$/compare_gan/runner_lib.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,8 +29,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/compare_gan/runner_lib.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="106" column="51" selection-start-line="106" selection-start-column="51" selection-end-line="106" selection-end-column="51" />
+            <state relative-caret-position="81">
+              <caret line="110" column="58" selection-start-line="110" selection-start-column="58" selection-end-line="110" selection-end-column="58" />
               <folding>
                 <element signature="e#669#707#0" expanded="true" />
               </folding>
@@ -42,7 +41,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/compare_gan/gans/modular_gan.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
+            <state relative-caret-position="2947">
               <caret line="601" column="34" selection-start-line="601" selection-start-column="30" selection-end-line="601" selection-end-column="34" />
               <folding>
                 <element signature="e#666#704#0" expanded="true" />
@@ -54,8 +53,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/compare_gan/gans/custom_gan.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="515" column="39" lean-forward="true" selection-start-line="515" selection-start-column="39" selection-end-line="515" selection-end-column="39" />
+            <state relative-caret-position="199">
+              <caret line="126" column="13" selection-start-line="126" selection-start-column="10" selection-end-line="126" selection-end-column="13" />
               <folding>
                 <element signature="e#666#704#0" expanded="true" />
               </folding>
@@ -145,12 +144,12 @@
       <find>_call_for_each_replica</find>
       <find>call_for_each_replica</find>
       <find>parameter</find>
-      <find>ema</find>
       <find>IOError</find>
       <find>Modular</find>
       <find>gin.</find>
       <find>eval_z</find>
       <find>eval</find>
+      <find>ema</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -258,15 +257,16 @@
       <updated>1570794826145</updated>
       <workItem from="1570794854734" duration="13057000" />
       <workItem from="1570812182900" duration="4985000" />
-      <workItem from="1571276288773" duration="14589000" />
+      <workItem from="1571276288773" duration="16460000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54723000" />
+    <option name="totallyTimeSpent" value="56594000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1513" height="973" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19148937" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -471,16 +471,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/compare_gan/gans/modular_gan.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="601" column="34" selection-start-line="601" selection-start-column="30" selection-end-line="601" selection-end-column="34" />
-          <folding>
-            <element signature="e#666#704#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/example_configs/custom_gan.gin">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="869">
@@ -488,10 +478,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/compare_gan/gans/modular_gan.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2947">
+          <caret line="601" column="34" selection-start-line="601" selection-start-column="30" selection-end-line="601" selection-end-column="34" />
+          <folding>
+            <element signature="e#666#704#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/compare_gan/runner_lib.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="106" column="51" selection-start-line="106" selection-start-column="51" selection-end-line="106" selection-end-column="51" />
+        <state relative-caret-position="81">
+          <caret line="110" column="58" selection-start-line="110" selection-start-column="58" selection-end-line="110" selection-end-column="58" />
           <folding>
             <element signature="e#669#707#0" expanded="true" />
           </folding>
@@ -500,8 +500,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/compare_gan/gans/custom_gan.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="515" column="39" lean-forward="true" selection-start-line="515" selection-start-column="39" selection-end-line="515" selection-end-column="39" />
+        <state relative-caret-position="199">
+          <caret line="126" column="13" selection-start-line="126" selection-start-column="10" selection-end-line="126" selection-end-column="13" />
           <folding>
             <element signature="e#666#704#0" expanded="true" />
           </folding>
