@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="613ef6b5-b515-420b-a4b4-0852de03e8eb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/compare_gan/gans/custom_gan.py" beforeDir="false" afterPath="$PROJECT_DIR$/compare_gan/gans/custom_gan.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,8 +30,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/compare_gan/runner_lib.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="105" column="16" lean-forward="true" selection-start-line="105" selection-start-column="16" selection-end-line="105" selection-end-column="16" />
+            <state relative-caret-position="-400">
+              <caret line="87" column="24" selection-start-line="87" selection-start-column="24" selection-end-line="87" selection-end-column="24" />
+              <folding>
+                <element signature="e#669#707#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -38,8 +42,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/compare_gan/gans/modular_gan.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
-              <caret line="505" column="41" lean-forward="true" selection-start-line="505" selection-start-column="41" selection-end-line="505" selection-end-column="41" />
+            <state relative-caret-position="-1917">
+              <caret line="55" column="5" selection-start-line="55" selection-start-column="1" selection-end-line="55" selection-end-column="5" />
               <folding>
                 <element signature="e#666#704#0" expanded="true" />
               </folding>
@@ -50,8 +54,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/compare_gan/gans/custom_gan.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4047">
-              <caret line="511" column="46" lean-forward="true" selection-start-line="511" selection-start-column="46" selection-end-line="511" selection-end-column="46" />
+            <state relative-caret-position="226">
+              <caret line="56" column="10" selection-start-line="56" selection-start-column="10" selection-end-line="56" selection-end-column="10" />
               <folding>
                 <element signature="e#666#704#0" expanded="true" />
               </folding>
@@ -60,10 +64,45 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/compare_gan/gans/s3gan.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1343" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/example_configs/dcgan_celeba64.gin">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-320" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/compare_gan/gans/ops.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-182" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/compare_gan/gans/utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/example_configs/resnet_cifar10.gin">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/compare_gan/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
-              <caret line="124" column="31" lean-forward="true" selection-start-line="124" selection-start-column="31" selection-end-line="124" selection-end-column="31" />
+            <state relative-caret-position="928">
+              <caret line="114" column="34" selection-start-line="114" selection-start-column="34" selection-end-line="114" selection-end-column="34" />
               <folding>
                 <element signature="e#664#702#0" expanded="true" />
               </folding>
@@ -72,64 +111,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/compare_gan/invBigBiGAN.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="577">
-              <caret line="49" selection-start-line="49" selection-end-line="49" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/compare_gan/architectures/invert.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="112" lean-forward="true" selection-start-line="112" selection-end-line="112" />
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/compare_gan/architectures/resnet_biggan.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="80" column="41" lean-forward="true" selection-start-line="80" selection-start-column="41" selection-end-line="80" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/compare_gan/architectures/abstract_arch.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-405" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/compare_gan/gans/invGAN.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
+            <state relative-caret-position="351">
               <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/compare_gan/gans/abstract_gan.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-368">
-              <caret line="40" column="6" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="6" />
-              <folding>
-                <element signature="e#682#720#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -153,6 +140,9 @@
       <find>call_for_each_replica</find>
       <find>parameter</find>
       <find>ema</find>
+      <find>IOError</find>
+      <find>Modular</find>
+      <find>gin.</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -166,11 +156,11 @@
         <option value="$PROJECT_DIR$/example_configs/biggan_imagenet128.gin" />
         <option value="$PROJECT_DIR$/compare_gan/gans/utils.py" />
         <option value="$PROJECT_DIR$/compare_gan/custom_strategy.py" />
-        <option value="$PROJECT_DIR$/compare_gan/main.py" />
         <option value="$PROJECT_DIR$/compare_gan/architectures/invert.py" />
         <option value="$PROJECT_DIR$/compare_gan/gans/invGAN.py" />
         <option value="$PROJECT_DIR$/compare_gan/invBigBiGAN.py" />
         <option value="$PROJECT_DIR$/compare_gan/runner_lib.py" />
+        <option value="$PROJECT_DIR$/compare_gan/main.py" />
         <option value="$PROJECT_DIR$/compare_gan/gans/custom_gan.py" />
       </list>
     </option>
@@ -259,17 +249,18 @@
       <updated>1570794826145</updated>
       <workItem from="1570794854734" duration="13057000" />
       <workItem from="1570812182900" duration="4985000" />
-      <workItem from="1571276288773" duration="6244000" />
+      <workItem from="1571276288773" duration="9727000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46378000" />
+    <option name="totallyTimeSpent" value="49861000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1513" height="973" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19148937" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19148937" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -283,7 +274,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053304" side_tool="true" weight="0.27874187" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49946696" visible="true" weight="0.29181495" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49946696" visible="true" weight="0.29181495" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.3499407" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -310,13 +301,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/compare_gan/gans/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/tensorflow/python/distribute/distribute_lib.py" />
     <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/tensorflow/python/distribute/shared_variable_creator.py" />
     <entry file="file://D:/conda/envs/tf/Lib/site-packages/tensorflow/python/distribute/distribute_lib.py">
@@ -327,20 +311,10 @@
     <entry file="file://$PROJECT_DIR$/setup.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/compare_gan/gans/ops.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/compare_gan/architectures/arch_ops.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="13014">
           <caret line="497" column="45" selection-start-line="497" selection-start-column="45" selection-end-line="497" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/example_configs/biggan_imagenet128.gin">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
         </state>
       </provider>
     </entry>
@@ -373,26 +347,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/compare_gan/architectures/invert.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="112" lean-forward="true" selection-start-line="112" selection-end-line="112" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/compare_gan/gans/invGAN.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/compare_gan/invBigBiGAN.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="577">
@@ -403,10 +357,94 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/compare_gan/architectures/invert.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1991">
+          <caret line="28" column="45" selection-start-line="28" selection-start-column="45" selection-end-line="28" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/conda/envs/tf/Lib/site-packages/gin/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="30" column="32" lean-forward="true" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example_configs/biggan_imagenet128.gin">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="15" column="31" lean-forward="true" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/conda/envs/tf/Lib/site-packages/gin/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="151" selection-start-line="151" selection-end-line="151" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example_configs/dcgan_celeba64.gin">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-320" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example_configs/sndcgan_celebahq128.gin">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example_configs/resnet_cifar10.gin">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compare_gan/runner_lib.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-400">
+          <caret line="87" column="24" selection-start-line="87" selection-start-column="24" selection-end-line="87" selection-end-column="24" />
+          <folding>
+            <element signature="e#669#707#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compare_gan/gans/invGAN.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compare_gan/gans/ops.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-182" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compare_gan/gans/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compare_gan/gans/modular_gan.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1917">
+          <caret line="55" column="5" selection-start-line="55" selection-start-column="1" selection-end-line="55" selection-end-column="5" />
+          <folding>
+            <element signature="e#666#704#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/compare_gan/gans/abstract_gan.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-368">
-          <caret line="40" column="6" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="6" />
+        <state relative-caret-position="-533">
+          <caret line="31" column="6" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
           <folding>
             <element signature="e#682#720#0" expanded="true" />
           </folding>
@@ -415,35 +453,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/compare_gan/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="124" column="31" lean-forward="true" selection-start-line="124" selection-start-column="31" selection-end-line="124" selection-end-column="31" />
+        <state relative-caret-position="928">
+          <caret line="114" column="34" selection-start-line="114" selection-start-column="34" selection-end-line="114" selection-end-column="34" />
           <folding>
             <element signature="e#664#702#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/compare_gan/runner_lib.py">
+    <entry file="file://$PROJECT_DIR$/compare_gan/gans/s3gan.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="105" column="16" lean-forward="true" selection-start-line="105" selection-start-column="16" selection-end-line="105" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/compare_gan/gans/modular_gan.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="505" column="41" lean-forward="true" selection-start-line="505" selection-start-column="41" selection-end-line="505" selection-end-column="41" />
-          <folding>
-            <element signature="e#666#704#0" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-1343" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/compare_gan/gans/custom_gan.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4047">
-          <caret line="511" column="46" lean-forward="true" selection-start-line="511" selection-start-column="46" selection-end-line="511" selection-end-column="46" />
+        <state relative-caret-position="226">
+          <caret line="56" column="10" selection-start-line="56" selection-start-column="10" selection-end-line="56" selection-end-column="10" />
           <folding>
             <element signature="e#666#704#0" expanded="true" />
           </folding>

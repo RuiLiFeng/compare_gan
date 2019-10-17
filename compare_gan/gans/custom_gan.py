@@ -41,6 +41,7 @@ from compare_gan.gans import penalty_lib
 from compare_gan.gans.abstract_gan import AbstractGAN
 from compare_gan.tpu import tpu_random
 from compare_gan.tpu import tpu_summaries
+from compare_gan.architectures import invert
 import gin
 import numpy as np
 from six.moves import range
