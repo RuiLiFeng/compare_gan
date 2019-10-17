@@ -100,13 +100,13 @@ def get_options_dict(batch_size=gin.REQUIRED,
     A Python dictionary with the options.
   """
   del discriminator_normalization
-  if ema:
-      gen_step = tf.train.get_or_create_global_step()
-      decay = 0.999 * tf.cast(
-               tf.greater_equal(gen_step, 250000), tf.float32)
-      ema = tf.train.ExponentialMovingAverage(decay)
-  else:
-      ema = None
+  # if ema:
+  #     gen_step = tf.train.get_or_create_global_step()
+  #     decay = 0.999 * tf.cast(
+  #              tf.greater_equal(gen_step, 250000), tf.float32)
+  #     ema = tf.train.ExponentialMovingAverage(decay)
+  # else:
+  #     ema = None
   return {
       "use_tpu": FLAGS.use_tpu,  # For compatibility with AbstractGAN.
       "batch_size": batch_size,

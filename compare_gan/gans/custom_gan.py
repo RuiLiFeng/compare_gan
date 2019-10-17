@@ -500,18 +500,18 @@ class CustomGAN(AbstractGAN):
           self.g_loss,
           var_list=self.generator.trainable_variables,
           global_step=step)
-      if self._g_use_ema:
-        g_vars = self.generator.trainable_variables
-        with tf.variable_scope(name_or_scope="generator_ema", reuse=tf.AUTO_REUSE):
-          logging.info("Creating moving averages of weights: %s", g_vars)
-          # The decay value is set to 0 if we're before the moving-average start
-          # point, so that the EMA vars will be the normal vars.
-          # decay = self._ema_decay * tf.cast(
-          #     tf.greater_equal(step, self._ema_start_step), tf.float32)
-          # ema = tf.train.ExponentialMovingAverage(decay=decay)
-          ema = self._ema
-          with tf.control_dependencies([train_op]):
-              train_op = ema.apply(g_vars)
+      # if self._g_use_ema:
+      #   g_vars = self.generator.trainable_variables
+      #   with tf.variable_scope(name_or_scope="generator_ema", reuse=tf.AUTO_REUSE):
+      #     logging.info("Creating moving averages of weights: %s", g_vars)
+      #     # The decay value is set to 0 if we're before the moving-average start
+      #     # point, so that the EMA vars will be the normal vars.
+      #     # decay = self._ema_decay * tf.cast(
+      #     #     tf.greater_equal(step, self._ema_start_step), tf.float32)
+      #     # ema = tf.train.ExponentialMovingAverage(decay=decay)
+      #     ema = self._ema
+      #     with tf.control_dependencies([train_op]):
+      #         train_op = ema.apply(g_vars)
       with tf.control_dependencies([train_op]):
         return tf.identity(self.g_loss)
 
