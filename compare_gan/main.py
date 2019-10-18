@@ -89,7 +89,8 @@ def _get_run_config(tf_random_seed=None,
   tpu_config = tf.contrib.tpu.TPUConfig(
       num_shards=1 if single_core else None,  # None = all cores.
       iterations_per_loop=iterations_per_loop)
-  strategy = tf.distribute.MirroredStrategy()
+  # strategy = tf.distribute.MirroredStrategy()
+  strategy = tf.contrib.distribute.CollectiveAllReduceStrategy(8)
   return tf.contrib.tpu.RunConfig(
       model_dir=FLAGS.model_dir,
       train_distribute=strategy,
