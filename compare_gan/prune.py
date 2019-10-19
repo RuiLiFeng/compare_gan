@@ -128,4 +128,5 @@ def create_apply_graph(self, signature, input_tensors, name):
     return tensor_info.build_output_map(signature_def.outputs, get_tensor)
 
 
-_ModuleImpl.create_apply_graph.__code__ = create_apply_graph.__code__
+def init():
+    _ModuleImpl.create_apply_graph.__code__ = create_apply_graph.__code__
