@@ -48,7 +48,7 @@ def create_apply_graph(self, signature, input_tensors, name):
     # TODO(b/112575006): The following adds functionality of function call
     # within a TPU context. Work to generalize this for all function calls is
     # ongoing.
-    if True:
+    if False:
       for k, v in self._state_map.items():
         feed_map[k] = apply_graph.capture(v)
       meta_graph_lib.prune_unused_nodes(meta_graph, signature_def)
@@ -62,6 +62,10 @@ def create_apply_graph(self, signature, input_tensors, name):
       #
       # E.g. it could work with "tf.compat.v1.wrap_function", but it will not
       # work with defun, Dataset.map_fn, etc...
+      meta_graph_lib.prune_unused_nodes(meta_graph, signature_def)
+      # After we prune the metagraph def, we might need to prune away
+      # infeeds which no longer exist.
+      meta_graph_lib.prune_feed_map(meta_graph, infeed_map)
       logging.warning("Using `hub.Module` while building a function: %s. This "
                       "can lead to errors if the function is not pruned.",
                       apply_graph.name)

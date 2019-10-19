@@ -63,8 +63,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/compare_gan/prune.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="130" column="37" selection-start-line="130" selection-end-line="130" selection-end-column="69" />
+            <state relative-caret-position="2199">
+              <caret line="131" column="65" selection-start-line="131" selection-start-column="65" selection-end-line="131" selection-end-column="65" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
                 <element signature="e#321#1065#0" />
@@ -267,12 +267,12 @@
       <workItem from="1570794854734" duration="13057000" />
       <workItem from="1570812182900" duration="4985000" />
       <workItem from="1571276288773" duration="22381000" />
-      <workItem from="1571400155798" duration="9656000" />
+      <workItem from="1571400155798" duration="10000000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72171000" />
+    <option name="totallyTimeSpent" value="72515000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1513" height="973" extended-state="6" />
@@ -541,8 +541,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/compare_gan/prune.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="130" column="37" selection-start-line="130" selection-end-line="130" selection-end-column="69" />
+        <state relative-caret-position="2199">
+          <caret line="131" column="65" selection-start-line="131" selection-start-column="65" selection-end-line="131" selection-end-column="65" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
             <element signature="e#321#1065#0" />
