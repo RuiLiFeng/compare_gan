@@ -75,7 +75,7 @@ def create_apply_graph(self, signature, input_tensors, name):
     # ignored.
     replace_apply_state(
         meta_graph,
-        list_registered_stateful_ops_without_inputs(meta_graph.graph_def),
+        list_registered_stateful_ops_without_inputs(),
         feed_map)
     feed_map.update(infeed_map)
 
