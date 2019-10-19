@@ -134,3 +134,11 @@ def create_apply_graph(self, signature, input_tensors, name):
 
 def init():
     _ModuleImpl.create_apply_graph.__code__ = create_apply_graph.__code__
+
+
+def test():
+    init()
+    m = hub.Module('bigbigan')
+    z = tf.placeholder(tf.float32)
+    x = m(z, signature='generate', as_dict=True)['default']
+    return m, z, x
